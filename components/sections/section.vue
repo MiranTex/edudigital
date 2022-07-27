@@ -16,9 +16,13 @@ import { anime_ } from "~/assets/js/animate";
 export default {
     components:{ Intersect },
     props:{
-        contentAlign:{
+        contentJustify:{
             type:String,
             default:"inherit"
+        },
+        itemAlign:{
+            type:String,
+            default:"center"
         },
         shouldAnime:{
             type:Boolean,
@@ -36,6 +40,10 @@ export default {
         id:{
             type:String,
             required:true
+        },
+        flex:{
+            type:String,
+            default:"row"
         }
     },
     computed:{
@@ -43,6 +51,7 @@ export default {
 
             return{
                 background:this.background
+                
             }
         },
 
@@ -50,7 +59,9 @@ export default {
 
             return{
                 width:this.fluid ? "100%" : "75%",
-                justifyContent: this.contentAlign
+                justifyContent: this.contentJustify,
+                alignItems:this.itemAlign,
+                flexDirection:this.flex
             }
         }
     },
@@ -72,7 +83,7 @@ export default {
 <style scoped>
     .container-section{
         display: flex;
-        padding: 30px 0;
+        padding: 60px 0;
     }
 
     .content-section{
