@@ -16,6 +16,10 @@ import { anime_ } from "~/assets/js/animate";
 export default {
     components:{ Intersect },
     props:{
+        contentAlign:{
+            type:String,
+            default:"inherit"
+        },
         shouldAnime:{
             type:Boolean,
             required:false,
@@ -45,7 +49,8 @@ export default {
         content_style(){
 
             return{
-                width:this.fluid ? "100%" : "75%"
+                width:this.fluid ? "100%" : "75%",
+                justifyContent: this.contentAlign
             }
         }
     },

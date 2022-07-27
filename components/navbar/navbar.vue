@@ -23,18 +23,18 @@
     </div>
     <div id="bottom">
         <ul>
-            <li class="drop-parent"><a class="menu link" href="#">{{$translate().menus.plataformas_elearning}}</a>
+            <li class="drop-parent"><NuxtLink to="/plataformas_elearning" class="menu link">{{$translate().menus.plataformas_elearning}}</NuxtLink>
                 <div class="drop-down">
                     <ul>
-                        <li><a class="menu link" href="#">Plataformas Open-source</a></li>
+                        <li><NuxtLink class="menu link" to="/plataformas_elearning/plataformas_open_source">Plataformas Open-source</NuxtLink></li>
                         <li><a class="menu link" href="#">Plataformas Totara</a></li>
                         <li><a class="menu link" href="#">Hosting Gerido & Cloud</a></li>
                     </ul>
                 </div>
             </li>
-            <li><a class="menu link" href="#">Cursos de Elearning à medida</a></li>
-            <li><a class="menu link" href="#">Formação certifiada</a></li>
-            <li><a class="menu link" href="#">APPs & Serviços Web</a></li>
+            <li><a class="menu link" href="#">{{$translate().menus.cursos_de_elearning_a_medida}}</a></li>
+            <li><a class="menu link" href="#">{{$translate().menus.formacao_certificada}}</a></li>
+            <li><a class="menu link" href="#">{{$translate().menus.apps_e_servicos_web}}</a></li>
             <li><a class="menu link" href="#">Software Académicos</a></li>
         </ul>
     </div>

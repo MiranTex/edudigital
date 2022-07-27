@@ -11,13 +11,17 @@
           {{$translate().index.banner.text}}
       </template>
 
-      <template class="cartoon" v-slot:cartoon>
-        <!-- <img ref="cartoom_" width="400" :src="require('~/assets/img/cartoon.png')" alt=""> -->
-      </template>
     </banner>
-    <Section :id="'main-section'">
+
+    <Section 
+      :id="'main-section'"
+      :contentAlign="'center'"
+      :background="'#fff'">
       
+      <Title style="color:var(--color-cinza)" :title="'Os nossos serviços'" />
+
     </Section>
+
     <Contactform />
   </div>
 </template>
@@ -30,10 +34,11 @@ import banner from '~/components/banner.vue'
 import Section from '~/components/sections/section.vue';
 import Contactform from '~/components/contactform.vue';
 import Counter from '../components/counter.vue';
+import Title from '~/components/elements/title.vue';
 
 
 export default Vue.extend({
-  components: { banner, Section, Contactform, Counter },
+  components: { banner, Section, Contactform, Counter, Title },
 
   data(){
     return{

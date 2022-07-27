@@ -5,7 +5,10 @@
         <Nuxt ref="body_content" id="body-content" />
         <Footer />
 
-        <a v-show="!onTop" class="btn btn-primary btnGoTop" @click="e=>{goTop(e)}" href=""><fa :icon="['fas','fa-circle-arrow-up']"/></a>
+        <transition name="fade" mode="out-in">
+
+          <a v-show="!onTop" class="btn btn-primary btnGoTop" @click="e=>{goTop(e)}" href=""><fa :icon="['fas','fa-circle-arrow-up']"/></a>
+        </transition>
     </div>
 </template>
 
@@ -27,7 +30,7 @@ export default {
     window.addEventListener("scroll",(e)=>{
 
       let scrollTop = window.scrollY;
-      if(scrollTop > 10){
+      if(scrollTop > 500){
         this.onTop = false
       }else{
         this.onTop = true

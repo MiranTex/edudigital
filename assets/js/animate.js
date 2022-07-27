@@ -9,7 +9,17 @@ export function translate(element){
 }
 
 
-
+export function upDownAnimation(target,loop=true){
+    anime_({
+        targets:target,
+        translateY:5,
+        // duration:3000,
+        easing:"easeInOutSine",
+        direction:"alternate",
+        loop:loop,
+        delay: 0
+      })
+}
 
 export function custonAnime(params){
     anime(params);

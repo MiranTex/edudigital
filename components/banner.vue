@@ -1,5 +1,5 @@
 <template>
-  <section id="section-banner" :style="section_style">
+  <section id="section-banner" class="section-banner" :style="section_style">
     <!-- <div class="bradcrumbs">
         <Breadcrumbs />
     </div> -->
@@ -9,7 +9,7 @@
             <intersect @enter.once="enter">
 
                 <div id="banner-content">
-                    <h1>{{title}}</h1>
+                    <Title :title=title></Title>
                     <p>
                         <slot name="text"></slot>
                     </p>
@@ -28,11 +28,12 @@
 
 <script>
 import Breadcrumbs from './breadcrumbs.vue';
+import Title from "~/components/elements/title"
 import Intersect from "~/assets/js/vue-intersect";
 
 import {anime_} from "~/assets/js/animate";
 export default {
-    components: { Breadcrumbs, Intersect },
+    components: { Breadcrumbs, Intersect, Title },
     props:{
         buttonActionText:{
             type:String
@@ -63,7 +64,7 @@ export default {
 
     mounted(){
         anime_({
-            targets:"#section-banner",
+            targets:".section-banner",
             opacity:[0,1],
             duration:800,
             easing:"linear",
@@ -83,6 +84,8 @@ export default {
                     return i*400
                 }
                 })
+
+                this.$emit("after-enter")
             }
         },
 
@@ -151,6 +154,16 @@ export default {
             margin-bottom: 30px;
         }
     }
+
+    .banner-cartoon{
+        display: none;
+        justify-content: center;
+    
+        img{
+            margin: auto;
+        }
+    }
+    
 
 
     @media screen and (max-width:950px ){

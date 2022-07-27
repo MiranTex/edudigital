@@ -5,7 +5,10 @@ export default function langs(){
     const langs ={
         pt_lang: {
             menus:{
-                plataformas_elearning: "Plataformas eLearning"
+                plataformas_elearning: "Plataformas eLearning",
+                cursos_de_elearning_a_medida: "Cursos de eLearning à medida",
+                formacao_certificada: "Formação certificada",
+                apps_e_servicos_web: "APPs & Serviços Web"
             },
             "index":{
                 "banner":{
