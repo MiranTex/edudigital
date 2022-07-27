@@ -4,7 +4,7 @@
             <div class="fast-access-menu">
                 <ul class="menu-footer">
                     <li><a href="#" class="link">O que fazemos</a></li>
-                    <li><a href="#" class="link">Plataformas eLearning</a></li>
+                    <li><a href="#" class="link">{{$translate().menus.plataformas_elearning}}</a></li>
                     <li><a href="#" class="link">Cursos de eLearning à medida</a></li>
                     <li><a href="#" class="link">Formação à medida</a></li>
                     <li><a href="#" class="link">APPs e Serviços Web</a></li>
@@ -43,10 +43,10 @@
                 <Logo :width="200" />
                 <p><strong>Encontre-nos nas nossas redes sociais</strong></p>
                 <div class="social">
-                    <a href=""><img width="30" src="~/assets/img/social/facebook.png" alt=""></a>
-                    <a href=""><img width="30" src="~/assets/img/social/linkedin.png" alt=""></a>
-                    <a href=""><img width="30" src="~/assets/img/social/youtube.png" alt=""></a>
-                    <a href=""><img width="30" src="~/assets/img/social/instagram.png" alt=""></a>
+                    <a target="_blank" href="https://www.facebook.com/EDUdigitalPT/"><img width="30" src="~/assets/img/social/facebook.png" alt=""></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/edudigital/mycompany/"><img width="30" src="~/assets/img/social/linkedin.png" alt=""></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCxgJZFGXdhDZKVUCDChmmDw"><img width="30" src="~/assets/img/social/youtube.png" alt=""></a>
+                    <a target="_blank" href="https://www.instagram.com/edudigital_learn/"><img width="30" src="~/assets/img/social/instagram.png" alt=""></a>
 
                 </div>
             </div>

@@ -23,7 +23,7 @@
     </div>
     <div id="bottom">
         <ul>
-            <li class="drop-parent"><a class="menu link" href="#">Plataformas eLearning</a>
+            <li class="drop-parent"><a class="menu link" href="#">{{$translate().menus.plataformas_elearning}}</a>
                 <div class="drop-down">
                     <ul>
                         <li><a class="menu link" href="#">Plataformas Open-source</a></li>

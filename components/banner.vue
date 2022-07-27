@@ -61,6 +61,16 @@ export default {
         }
     },
 
+    mounted(){
+        anime_({
+            targets:"#section-banner",
+            opacity:[0,1],
+            duration:800,
+            easing:"linear",
+        })
+        
+        },  
+
     methods:{
         enter(){
             anime_({
