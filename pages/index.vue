@@ -34,6 +34,22 @@
 
     </Section>
 
+    <Sectionduble
+      :id="'index-inovacao-na-aprendizagem'"
+      :background="'#d35640'"
+      :img="require('static/cartoon/Inovao_na_aprendizagem.png')"
+      :flexDirection="'reverse-'"
+    >
+      <template #text>
+        <Title :title="'Inovação na Aprendizagem'" />
+        <p>Temos para si serviços flexíveis e pioneiros, entregando plataformas de eLearning personalizadas, conteúdos ´
+          digitais interativos e ferramentas de análise. Somos parceiros de várias grandes empresas e marcas mundiais de tecnologias na formação.</p>
+      </template>
+      <template #cartoon>
+
+      </template>
+    </Sectionduble>
+
     <Contactform />
   </div>
 </template>
@@ -48,10 +64,12 @@ import Contactform from '~/components/contactform.vue';
 import Counter from '../components/counter.vue';
 import Title from '~/components/elements/title.vue';
 import Icon from '~/components/elements/icon.vue';
+import Sectionduble from '~/components/sections/sectionduble.vue';
+import Title1 from '~/components/elements/title.vue';
 
 
 export default Vue.extend({
-  components: { banner, Section, Contactform, Counter, Title, Icon },
+  components: { banner, Section, Contactform, Counter, Title, Icon, Sectionduble, Title1 },
 
   data(){
     return{

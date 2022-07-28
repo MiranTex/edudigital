@@ -1,4 +1,4 @@
-import langs from "~/assets/js/lang"
+import langs from "~/lang"
 
 export default ({app},inject)=>{
     inject("translate",()=>{

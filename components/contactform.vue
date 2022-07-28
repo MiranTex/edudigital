@@ -4,7 +4,7 @@
     <intersect @enter.once="animeInputs">
 
         <div id="form-contact" class="form-contact">
-            <h1>Contacte-nos</h1>
+            <Title class="form-title" :type="'sub'" :title="'Contacte-nos'"></Title>
 
             <div id="form-content" class="form-content">
                 <input v-model="name" placeholder="Nome*" type="text" class="form-control">
@@ -12,8 +12,8 @@
                 <input v-model="tel" placeholder="Telemóvel*" type="text" class="form-control">
                 <input v-model="empresa" placeholder="Empresa" type="text" class="form-control">
                 <input v-model="cargo" placeholder="Cargo" type="text" class="form-control">
-                <input v-model="assunto" placeholder="Assunto" type="text" class="form-control">
-                <textarea v-model="mensagem" placeholder="Mensagem" class="form-control text-area" name="" id="" cols="30" rows="10"></textarea>
+                <input v-model="assunto" placeholder="Assunto*" type="text" class="form-control">
+                <textarea v-model="mensagem" placeholder="Mensagem*" class="form-control text-area" name="" id="" cols="30" rows="10"></textarea>
                 <span>*Campos obrigatórios</span>
                 <button @click="sendForm" type="button" class="btn btn-gray">Enviar</button>
             </div>
@@ -30,8 +30,9 @@ import Section from './sections/section.vue';
 import {anime_} from "~/assets/js/animate";
 import Intersect from "~/assets/js/vue-intersect";
 import Swal from "sweetalert2";
+import Title from './elements/title.vue';
 export default {
-    components: { Section, Intersect },
+    components: { Section, Intersect, Title },
 
     data(){
         return {
@@ -191,8 +192,7 @@ export default {
         border-color: green;
  
 
-        h1{
-            font-size: 2.5rem;
+        .form-title{
             margin-bottom: 15px;
             font-weight: 500;
         }
