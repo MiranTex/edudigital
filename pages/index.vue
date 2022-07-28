@@ -38,15 +38,14 @@
       :id="'index-inovacao-na-aprendizagem'"
       :background="'#d35640'"
       :img="require('static/cartoon/Inovao_na_aprendizagem.png')"
-      :flexDirection="'reverse-'"
+      :flexDirection="'row'"
     >
       <template #text>
-        <Title :title="'Inovação na Aprendizagem'" />
-        <p>Temos para si serviços flexíveis e pioneiros, entregando plataformas de eLearning personalizadas, conteúdos ´
-          digitais interativos e ferramentas de análise. Somos parceiros de várias grandes empresas e marcas mundiais de tecnologias na formação.</p>
-      </template>
-      <template #cartoon>
-
+        <Title :title="$translate().index.inovacao_na_aprendizagem.title" />
+        <p>{{$translate().index.inovacao_na_aprendizagem.text}}</p>
+        <div>
+          <NuxtLink class="btn btn-secondary" to="/">{{$translate().index.inovacao_na_aprendizagem.btn_case_studies}}</NuxtLink>
+        </div>
       </template>
     </Sectionduble>
 

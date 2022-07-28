@@ -20,6 +20,16 @@
     }
 }
 
+.btn-secondary{
+    background: var(--color-verde);
+    color: #fff;
+
+    &:hover{
+        box-shadow: 1px 1px 3px 0px var(--color-verde-dark);
+        background: var(--color-verde-dark);
+    }
+}
+
 .btn-gray{
     background: var(--color-cinza);
     margin: auto;

@@ -1,8 +1,8 @@
 <template>
     <intersect @enter.once="animeSection">
-        <section :id="id" :style="style" class="container-section">
+        <section  :id="id" :style="style" class="container-section">
         
-            <div :style="content_style" class="content-section">
+            <div :class="flexDirection" :style="content_style" class="content-section">
                 <slot></slot>
             </div>
         </section>
@@ -43,7 +43,7 @@ export default {
         },
         flex:{
             type:String,
-            default:"row"
+            default:"inherit"
         }
     },
     computed:{
@@ -55,13 +55,27 @@ export default {
             }
         },
 
+        flexDirection(){
+            if(this.flex == "inherit")
+                return "";
+
+            if(this.flex == "column")
+                return "flex-column";
+
+            if(this.flex == "row")
+                return "flex-row";
+
+            if(this.flex == "column-reverse")
+                return "flex-column-reverse";
+            
+            if(this.flex == "row-reverse")
+                return "flex-row-reverse";
+        },
+
         content_style(){
 
             return{
-                width:this.fluid ? "100%" : "75%",
-                justifyContent: this.contentJustify,
-                alignItems:this.itemAlign,
-                flexDirection:this.flex
+                width:this.fluid ? "100%" : "75%"
             }
         }
     },
@@ -75,12 +89,14 @@ export default {
                     opacity:[0,1],
                     easing:"linear",
                 });
+
+            this.$emit("end-animation")
         }
     }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .container-section{
         display: flex;
         padding: 60px 0;
@@ -90,5 +106,17 @@ export default {
         margin: auto;
         padding: 15px;
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+
+    @media screen and (max-width:900px) {
+        .content-section{
+            flex-direction: column;
+        }
+    
+    }
+
+    
 </style>

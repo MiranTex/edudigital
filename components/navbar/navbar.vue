@@ -35,7 +35,7 @@
             <li><a class="menu link" href="#">{{$translate().menus.cursos_de_elearning_a_medida}}</a></li>
             <li><a class="menu link" href="#">{{$translate().menus.formacao_certificada}}</a></li>
             <li><a class="menu link" href="#">{{$translate().menus.apps_e_servicos_web}}</a></li>
-            <li><a class="menu link" href="#">Software Académicos</a></li>
+            <li><a class="menu link" href="#">{{$translate().menus.softwares_academicos}}</a></li>
         </ul>
     </div>
   </header>

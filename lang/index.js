@@ -8,17 +8,27 @@ export default function langs(){
                 plataformas_elearning: "Plataformas eLearning",
                 cursos_de_elearning_a_medida: "Cursos de eLearning à medida",
                 formacao_certificada: "Formação certificada",
-                apps_e_servicos_web: "APPs & Serviços Web"
+                apps_e_servicos_web: "APPs & Serviços Web",
+                softwares_academicos:"Software Académicos"
             },
-            "index":{
-                "banner":{
+
+            index:{
+                banner:{
                     title:"Nós acreditamos que a aprendizagem nunca acaba",
                     
                     text: "Na EDUdigital sabemos que a aprendizagem liberta o potencial de cada pessoa e de cada organização. É por isso que implementamos plataformas online e desenvolvemos conteúdos" 
                     +"digitais para melhorar a igualdade entre as pessoas, favorecer o acesso a formação de qualidade e promover a aprendizagem ao longo da vida.",
                     
                     buttonActionText:"Fale Connosco"
+                },
+
+                inovacao_na_aprendizagem:{
+                    title: "Inovação na Aprendizagem",
+                    text: "Temos para si serviços flexíveis e pioneiros, entregando plataformas de eLearning personalizadas, conteúdos digitais interativos e ferramentas de análise."
+                    +" Somos parceiros de várias grandes empresas e marcas mundiais de tecnologias na formação.",
+                    btn_case_studies: "Case Studies"
                 }
+
             }
         },
         

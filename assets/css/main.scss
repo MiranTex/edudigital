@@ -20,7 +20,21 @@ html{
     box-sizing: border-box;
 }
 
+.flex-row{
+    flex-direction: row;
+}
 
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-row-reverse{
+    flex-direction: row-reverse;
+}
+
+.flex-column-reverse{
+    flex-direction: column-reverse;
+}
 
 .link{
     color: var(--color-verde);
