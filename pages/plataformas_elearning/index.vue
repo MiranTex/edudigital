@@ -14,6 +14,7 @@
         <img width="400" ref="cartoon" src="https://edudigital.pt/home/images/Grupo_450.png" alt="" srcset="">
       </template>
     </banner>
+    
 
     <contactform />
 </main>

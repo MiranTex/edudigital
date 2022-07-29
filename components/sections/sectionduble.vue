@@ -7,7 +7,7 @@
             </div>
 
             
-            <div class="sectiondouble-text">
+            <div :style="{color:this.color || 'inherit'}" class="sectiondouble-text">
                 <slot name="text"></slot>
             </div>
          
@@ -24,7 +24,7 @@ import { upDownAnimation } from '~/assets/js/animate';
 import Section from './section.vue';
 
 export default {
-    props: ["id", "img", "background", "flexDirection"],
+    props: ["id", "img", "background", "flexDirection","color"],
     components: { Section },
     methods:{
         animeCartoon(){

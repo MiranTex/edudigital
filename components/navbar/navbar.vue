@@ -12,7 +12,7 @@
         <div class="top-3">
             <nav>
                 <ul>
-                    <li><NuxtLink class="menu link" to="/">Fale Connosco</NuxtLink></li>
+                    <li><NuxtLink class="menu link" to="/fale_connosco">Fale Connosco</NuxtLink></li>
                     <li><NuxtLink class="menu link" to="/">Sobre Nós</NuxtLink></li>
                     <li><NuxtLink class="menu link" to="/">Case Studies</NuxtLink></li>
                     <li><NuxtLink class="menu link" to="/">Marketplace</NuxtLink></li>
