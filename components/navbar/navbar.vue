@@ -16,7 +16,7 @@
                     <li><NuxtLink class="menu link" to="/">Sobre Nós</NuxtLink></li>
                     <li><NuxtLink class="menu link" to="/">Case Studies</NuxtLink></li>
                     <li><NuxtLink class="menu link" to="/">Marketplace</NuxtLink></li>
-                    <li><NuxtLink class="btn btn-primary" to="/">eLearning</NuxtLink></li>
+                    <li><NuxtLink class="btn btn-primary btn-menu" to="/">eLearning</NuxtLink></li>
                 </ul>
             </nav>
         </div>
@@ -51,6 +51,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.btn-menu{
+    padding: 10px 40px;
+}
 
 header{
     display: grid;
@@ -106,6 +109,7 @@ header{
 
     .top-1{
         flex: 1;
+        align-items: center;
     }
 
     .top-2{

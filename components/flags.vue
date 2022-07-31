@@ -1,10 +1,10 @@
 <template>
   <ul class="flags">
-    <li><a href="#"><img width="20" :src="require('~/assets/img/flags/ao.png')" alt="" srcset=""></a></li>
-    <li><a href="#"><img width="20" :src="require('~/assets/img/flags/cv.png')" alt="" srcset=""></a></li>
-    <li><a href="#"><img width="20" :src="require('~/assets/img/flags/mz.png')" alt="" srcset=""></a></li>
-    <li><a href="#"><img width="20" :src="require('~/assets/img/flags/pt.png')" alt="" srcset=""></a></li>
-    <li><a href="#"><img width="20" :src="require('~/assets/img/flags/en.png')" alt="" srcset=""></a></li>
+    <li><a href="#"><img :src="require('~/assets/img/flags/ao.png')" alt="" srcset=""></a></li>
+    <li><a href="#"><img :src="require('~/assets/img/flags/cv.png')" alt="" srcset=""></a></li>
+    <li><a href="#"><img :src="require('~/assets/img/flags/mz.png')" alt="" srcset=""></a></li>
+    <li><a href="#"><img :src="require('~/assets/img/flags/pt.png')" alt="" srcset=""></a></li>
+    <li><a href="#"><img :src="require('~/assets/img/flags/en.png')" alt="" srcset=""></a></li>
   </ul>
 </template>
 
@@ -16,6 +16,7 @@ export default {
 
 <style lang="scss" scoped>
   .flags{
+      
       list-style: none;
       display: flex;
       width: 100%;
@@ -23,6 +24,12 @@ export default {
   }
 
   li{
+
+    a{
+      img{
+        width: 25px;
+      }
+    }
     transition: all 400ms ease;
   }
 

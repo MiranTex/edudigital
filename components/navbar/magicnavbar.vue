@@ -2,7 +2,7 @@
   <header :class="fixed ? 'fixed' : ''">
 
     <div class="header-button">
-      <Logo :width="150" class="logo-magicnavbar" />
+      <NuxtLink to="/" class="logo-link"><Logo :width="150" class="logo-magicnavbar" /></NuxtLink>
       <button @click="toogleMagic" type="button" class="btn"><fa :icon="['fas', 'bars']" /></button>
 
     </div>
@@ -62,6 +62,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .logo-link{
+    display: flex;
+    align-items: center;
+  }
   header{
     background: #fff;
     padding: 10px 30px;

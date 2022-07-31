@@ -1,8 +1,8 @@
 <template>
   <section id="section-banner" class="section-banner" :style="section_style">
-    <!-- <div class="bradcrumbs">
-        <Breadcrumbs />
-    </div> -->
+    <div class="bradcrumbs">
+        <!-- <Breadcrumbs /> -->
+    </div>
     <div :style="style" class="container">
 
         <div>
@@ -122,7 +122,6 @@ export default {
     .bradcrumbs{
         width: 75%;
         margin: auto;
-        padding: 10px 0;
     }
 
     .container{

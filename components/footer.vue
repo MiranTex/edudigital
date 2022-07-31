@@ -40,7 +40,7 @@
                 </ul>
             </div>
             <div class="footer-brand">
-                <Logo :width="200" />
+                <nuxt-link to="/"><Logo :width="200" /></nuxt-link>
                 <p><strong>Encontre-nos nas nossas redes sociais</strong></p>
                 <div class="social">
                     <a target="_blank" href="https://www.facebook.com/EDUdigitalPT/"><img width="30" src="~/assets/img/social/facebook.png" alt=""></a>

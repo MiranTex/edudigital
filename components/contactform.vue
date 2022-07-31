@@ -213,17 +213,20 @@ export default {
         }
     }
     .form-control{
-        transition: border, 400ms ease;
+        transition: border, 200ms ease;
         padding: 0 10px;
         width:100%;
         height: 40px;
         border-radius: 5px;
         border: 2px solid var(--color-light);
         outline-color: var(--color-verde);
-        color: var(--color-cinza);
+        // color: var(--color-cinza);
+        color:#fff!important;
         font-size: 1rem;
         margin-bottom: 15px;
-
+        &::placeholder{
+            color: #fff;
+        }
         &:focus{
             border: 2px solid var(--color-vermelho);
             outline:none;

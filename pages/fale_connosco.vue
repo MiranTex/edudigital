@@ -1,12 +1,31 @@
 <template>
   <div>
-    <Section :id="'cont'" :fluid="true" :noPadding="true">
-    <div>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit perspiciatis cupiditate nobis deserunt minus? Repellat
-         ducimus at natus consequuntur rerum voluptatibus modi cum, obcaecati quidem quas maxime corporis sint temporibus.
+    <banner 
+    :backgroundImage="require('~/assets/img/banner-bg.jpg')" 
+    :columnsTemplate="'2fr 1fr'"
+    :title="'Estamos aqui para ajudar'"
+    >
+      <template v-slot:text>
+          Seja para começar a planificar uma plataforma eLearning, seja para adquirir novos cursos eLearning para a sua organização, 
+          ou porque necessita de alguma orientação na formação online 
+          que quer iniciar – nós ficamos felizes por poder ajudar! Alguém da nossa equipa vai falar consigo em breve.
+      </template>
 
-      </p>
+    </banner>
+    <Section :background="'#eee'" :id="'cont'" :fluid="true" :noPadding="true">
+    <div>
+      <div class="fale-connosco-locale-info">
+        <strong><Title  :title="'Escritórios'"/></strong>
+        <Title :type="'title'" :title="'Portugal'"></Title>
+        <div>
+          <p>+351 214391476</p>
+          <p>geral@edudigital.pt</p>
+          <p>Taguspark - Parque da Ciência e Tecnologia</p>
+          <p>Núcleo Central, nº 302</p>
+          <p>2740-122 Oeiras</p>
+        </div>
+
+      </div>
     </div>
     
     <div>
@@ -22,8 +41,10 @@
 
 <script>
 import contactform from '~/components/contactform.vue'
+import Section from '~/components/sections/section.vue'
+import Title from '~/components/elements/title.vue'
 export default {
-  components: { contactform },
+  components: { contactform, Section, Title },
 
 }
 </script>
@@ -31,7 +52,39 @@ export default {
 <style socped lang="scss">
 #cont{
     div{
-      flex: 1;
+      div{
+        
+        flex: 1;
+      }
+    }
+  }
+
+
+  .fale-connosco-locale-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    h1, h3{
+      margin-bottom: 10px;
+    }
+    width: 50%;
+    margin: auto;
+    color: #616161;
+  }
+
+
+  @media screen and (max-width:900px) {
+
+    .fale-connosco-locale-info{
+      padding: 30px 0;
+    }
+    #cont{
+      & > div{
+        & > div{
+          width: 100%;
+        }
+      }
     }
   }
 </style>

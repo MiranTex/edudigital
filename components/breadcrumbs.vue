@@ -1,6 +1,7 @@
 <template>
     <div id="bread">
-        <div ref="breadcrumbs">Home</div>
+        <!-- <div ref="breadcrumbs">Home</div> -->
+        <v-breadcrumbs :large="true" :dark="true" :items="[{to:'/',link:true,text:'home'}]"></v-breadcrumbs>
     </div>
 
 </template>
