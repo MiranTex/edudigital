@@ -1,16 +1,29 @@
 <template>
   <ul class="flags">
-    <li><a href="#"><img :src="require('~/assets/img/flags/ao.png')" alt="" srcset=""></a></li>
-    <li><a href="#"><img :src="require('~/assets/img/flags/cv.png')" alt="" srcset=""></a></li>
-    <li><a href="#"><img :src="require('~/assets/img/flags/mz.png')" alt="" srcset=""></a></li>
-    <li><a href="#"><img :src="require('~/assets/img/flags/pt.png')" alt="" srcset=""></a></li>
-    <li><a href="#"><img :src="require('~/assets/img/flags/en.png')" alt="" srcset=""></a></li>
+    <li v-for="flag in flags" :key="'flags-'+flag"><a @click="redirect(flag)"><img :src="require(`~/assets/img/flags/${flag}.png`)" alt="" srcset=""></a></li>
   </ul>
 </template>
 
 <script>
+import Swal from 'sweetalert2'
 export default {
+  data(){
+    return{
+      flags:["ao","cv","mz","pt","en"]
+    }
+  },
 
+  methods:{
+    /**
+     * 
+     * @param {string} flag 
+     */
+    redirect(flag){
+      console.log(flag,"flags");
+      this.$emit("flag-clicked",flag)
+      
+    }
+  }
 }
 </script>
 
@@ -35,6 +48,18 @@ export default {
 
   li:hover{
     transform: translateY(5px)!important;
+  }
+
+
+  @media screen and (max-width:1159px) and (min-width: 900) {
+    li{
+
+      a{
+        img{
+          width: 20px;
+        }
+      }
+    }
   }
 
 </style>

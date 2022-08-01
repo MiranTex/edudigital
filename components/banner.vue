@@ -1,7 +1,7 @@
 <template>
   <section id="section-banner" class="section-banner" :style="section_style">
     <div class="bradcrumbs">
-        <!-- <Breadcrumbs /> -->
+        <Breadcrumbs />
     </div>
     <div :style="style" class="container">
 

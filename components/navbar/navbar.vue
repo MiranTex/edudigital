@@ -2,7 +2,8 @@
   <header>
     <div id="top">
         <div class="top-1">
-            <flags />
+            <flags @flag-clicked="flagClicked($event
+            )" />
         </div>
         <div class="top-2">
             <NuxtLink to="/">
@@ -12,8 +13,8 @@
         <div class="top-3">
             <nav>
                 <ul>
-                    <li><NuxtLink class="menu link" to="/fale_connosco">Fale Connosco</NuxtLink></li>
-                    <li><NuxtLink class="menu link" to="/">Sobre Nós</NuxtLink></li>
+                    <li><NuxtLink class="menu link" to="/fale-connosco">Fale Connosco</NuxtLink></li>
+                    <li><NuxtLink class="menu link" to="/sobre-nos">Sobre Nós</NuxtLink></li>
                     <li><NuxtLink class="menu link" to="/">Case Studies</NuxtLink></li>
                     <li><NuxtLink class="menu link" to="/">Marketplace</NuxtLink></li>
                     <li><NuxtLink class="btn btn-primary btn-menu" to="/">eLearning</NuxtLink></li>
@@ -23,10 +24,10 @@
     </div>
     <div id="bottom">
         <ul>
-            <li class="drop-parent"><NuxtLink to="/plataformas_elearning" class="menu link">{{$translate().menus.plataformas_elearning}}</NuxtLink>
+            <li class="drop-parent"><NuxtLink to="/plataformas-elearning" class="menu link">{{$translate().menus.plataformas_elearning}}</NuxtLink>
                 <div class="drop-down">
                     <ul>
-                        <li><NuxtLink class="menu link" to="/plataformas_elearning/plataformas_open_source">Plataformas Open-source</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/plataformas-elearning/plataformas-open-source">Plataformas Open-source</NuxtLink></li>
                         <li><a class="menu link" href="#">Plataformas Totara</a></li>
                         <li><a class="menu link" href="#">Hosting Gerido & Cloud</a></li>
                     </ul>
@@ -46,6 +47,13 @@ import Flags from '../flags.vue'
 import logo from '../logo.vue'
 export default {
   components: { logo, Flags },
+
+  methods:{
+    flagClicked($event){
+        console.log($event,"navbar");
+        this.$emit("flag-clicked",$event);
+    }
+  }
 
 }
 </script>

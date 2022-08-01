@@ -5,7 +5,7 @@
     :columnsTemplate="'2fr 1fr'"
     :title="$translate().index.banner.title"
     :buttonActionText="$translate().index.banner.buttonActionText"
-    :buttonActionHref="'/'"
+    :buttonActionHref="'/fale-connosco'"
     >
       <template v-slot:text>
           {{$translate().index.banner.text}}
@@ -18,7 +18,8 @@
       :contentJustify="'center'"
       :itemAlign="'center'"
       :background="'#fff'"
-      :flex="'column'">
+      :flex="'column'"
+      >
 
       <Title :textAlign="'center'" style="color:var(--color-cinza)" :title="'Os nossos serviços'" />
 
