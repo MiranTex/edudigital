@@ -23,7 +23,7 @@
     </div>
     <div id="bottom">
         <ul class="menu-bottom">
-            <li class="drop-parent"><NuxtLink to="/plataformas-elearning" class="menu link">{{$translate().menus.plataformas_elearning}}</NuxtLink>
+            <li class="drop-parent" :class="{active:menuActive == '/plataformas-elearning' }"><NuxtLink to="/plataformas-elearning" class="menu link">{{$translate().menus.plataformas_elearning}}</NuxtLink>
                 <div class="drop-down">
                     <ul>
                         <li><NuxtLink class="menu link" to="/plataformas-elearning/plataformas-open-source">Plataformas Open-source</NuxtLink></li>
@@ -62,10 +62,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.menus-top{
-    .active{
-        border-bottom-color: var(--color-vermelho)!important;
+.active{
+    &>a{
+        transform: scale(1.2);
     }
+    border-bottom-color: var(--color-vermelho)!important;
+}
+.menus-top{
 
 
 }

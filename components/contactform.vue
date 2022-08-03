@@ -241,7 +241,7 @@ export default {
     }
 
 
-    @media screen and (max-width:950px ){
+    @media screen and (max-width:700px ){
         .form-content{
             width: 100%;
         }

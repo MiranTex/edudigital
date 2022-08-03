@@ -2,7 +2,7 @@
   <header :class="fixed ? 'fixed' : ''">
 
     <div class="header-button">
-      <NuxtLink to="/" class="logo-link"><Logo :width="150" class="logo-magicnavbar" /></NuxtLink>
+      <a @click.prevent="goTo('/')" href="#" class="logo-link"><Logo :width="150" class="logo-magicnavbar" /></a>
       <button @click="toogleMagic" type="button" class="btn"><fa :icon="['fas', 'bars']" /></button>
 
     </div>
@@ -13,7 +13,7 @@
       <div v-show="fixed" class="menus-magicnavbar">
         <nav>
           <ul>
-           <li class="drop-parent"><a class="menu link" href="#">Plataformas eLearning</a>
+           <li class="drop-parent"><a class="menu link" href="#" @click.prevent="goTo('/plataformas-elearning')">Plataformas eLearning</a>
                 <div class="drop-down">
                     <ul>
                         <li><a class="menu link" href="#">Plataformas Open-source</a></li>
@@ -50,6 +50,12 @@ export default {
     },
 
     methods:{
+      goTo(url){
+
+        this.toogleMagic();
+        this.$router.push(url);
+      },
+
       toogleMagic(){
         this.fixed=!this.fixed
 

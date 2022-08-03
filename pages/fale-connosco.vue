@@ -1,7 +1,7 @@
 <template>
   <div>
     <banner 
-    :backgroundImage="require('~/assets/img/banner-bg.jpg')" 
+    :backgroundImage="'https://edudigital.pt/images/bigstock-Two-Smiling-Businessmen-Or-Pro-241216258%20.jpg'" 
     :columnsTemplate="'2fr 1fr'"
     :title="'Estamos aqui para ajudar'"
     >
