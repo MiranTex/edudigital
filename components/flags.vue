@@ -19,9 +19,43 @@ export default {
      * @param {string} flag 
      */
     redirect(flag){
-      console.log(flag,"flags");
-      this.$emit("flag-clicked",flag)
-      
+      flag = flag.toUpperCase()
+      // Swal.fire({
+      //   icon:"info",
+      //   text:`Está a ser redirecionado para o site de ${flag} `
+      // })
+
+      let timerInterval
+      Swal.fire({
+        html: `Está a ser redirecionado para o site de ${flag} `,
+        icon:"info",
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading()
+          const b = Swal.getHtmlContainer().querySelector('b')
+          timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft()
+          }, 100)
+        },
+        willClose: () => {
+          clearInterval(timerInterval)
+        }
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          
+        }
+
+        switch(flag){
+          case "PT":
+            window.location = "https://edudigital.pt";
+            break
+        }
+
+
+
+      })
     }
   }
 }
@@ -34,6 +68,7 @@ export default {
       display: flex;
       width: 100%;
       justify-content: space-around;
+      flex-wrap: wrap;
   }
 
   li{
@@ -44,6 +79,9 @@ export default {
       }
     }
     transition: all 400ms ease;
+    &:hover{
+      cursor: pointer;
+    }
   }
 
   li:hover{

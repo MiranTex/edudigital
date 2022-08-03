@@ -2,8 +2,7 @@
   <header>
     <div id="top">
         <div class="top-1">
-            <flags @flag-clicked="flagClicked($event
-            )" />
+            <flags/>
         </div>
         <div class="top-2">
             <NuxtLink to="/">
@@ -12,18 +11,18 @@
         </div>
         <div class="top-3">
             <nav>
-                <ul>
-                    <li><NuxtLink class="menu link" to="/fale-connosco">Fale Connosco</NuxtLink></li>
-                    <li><NuxtLink class="menu link" to="/sobre-nos">Sobre Nós</NuxtLink></li>
-                    <li><NuxtLink class="menu link" to="/">Case Studies</NuxtLink></li>
-                    <li><NuxtLink class="menu link" to="/">Marketplace</NuxtLink></li>
-                    <li><NuxtLink class="btn btn-primary btn-menu" to="/">eLearning</NuxtLink></li>
+                <ul class="menus-top">
+                    <li :class="{active:menuActive == '/fale-connosco' }"><NuxtLink  class="menu link" to="/fale-connosco">Fale Connosco</NuxtLink></li>
+                    <li :class="{active:menuActive == '/sobre-nos' }"><NuxtLink  class="menu link" to="/sobre-nos">Sobre Nós</NuxtLink></li>
+                    <li><NuxtLink  class="menu link" to="/">Case Studies</NuxtLink></li>
+                    <li><a  class="menu link" target="_blank" href="https://marketplace.edudigital-learn.com">Marketplace</a></li>
+                    <li><NuxtLink  class="btn btn-primary btn-menu" to="/">eLearning</NuxtLink></li>
                 </ul>
             </nav>
         </div>
     </div>
     <div id="bottom">
-        <ul>
+        <ul class="menu-bottom">
             <li class="drop-parent"><NuxtLink to="/plataformas-elearning" class="menu link">{{$translate().menus.plataformas_elearning}}</NuxtLink>
                 <div class="drop-down">
                     <ul>
@@ -48,10 +47,14 @@ import logo from '../logo.vue'
 export default {
   components: { logo, Flags },
 
-  methods:{
-    flagClicked($event){
-        console.log($event,"navbar");
-        this.$emit("flag-clicked",$event);
+  computed:{
+    /**
+     * var String:route
+     */
+    menuActive(){
+        let route = this.$route.path;
+        route = route.split("/")
+        return "/"+route[route.length - 1];
     }
   }
 
@@ -59,6 +62,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.menus-top{
+    .active{
+        border-bottom-color: var(--color-vermelho)!important;
+    }
+
+
+}
+
 .btn-menu{
     padding: 10px 40px;
 }

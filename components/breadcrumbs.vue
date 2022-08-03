@@ -27,7 +27,7 @@ export default {
 
                 if (match.name !== 'index') {
                     var text = path.split("/"),
-                    text = text[text.length - 1];
+                    text = text[text.length - 1].toUpperCase();
                 if (index === length - 1) {
                     crumbs.push({
                     text: text,
@@ -37,7 +37,7 @@ export default {
                 } else {
 
                     var text = path.split("/"),
-                    text = text[text.length - 1];
+                    text = text[text.length - 1].toUpperCase();
                     crumbs.push({
                     text: text,
                     disabled: false,

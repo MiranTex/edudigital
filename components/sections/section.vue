@@ -132,7 +132,7 @@ export default {
     }
 
 
-    @media screen and (max-width:900px) {
+    @media screen and (max-width:1000px) {
         .content-section{
             flex-direction: column;
             width: 100%!important;
