@@ -22,7 +22,14 @@
                     </ul>
                 </div>
             </li>
-            <li><a class="menu link" href="#">Cursos de Elearning à medida</a></li>
+            <li class="drop-parent"><a class="menu link" href="#">Cursos de Elearning à medida</a>
+            <div class="drop-down">
+                    <ul>
+                        <li><a class="menu link" href="#">Produção eLearning Personalizado</a></li>
+                        <li><a class="menu link" href="#">Motion Graphics & Gamification</a></li>
+                     </ul>
+                </div>
+            </li>
             <li><a class="menu link" href="#">Formação certifiada</a></li>
             <li><a class="menu link" href="#">APPs & Serviços Web</a></li>
             <li><a class="menu link" href="#">Software Académicos</a></li>

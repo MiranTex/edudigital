@@ -32,7 +32,14 @@
                     </ul>
                 </div>
             </li>
-            <li><a class="menu link" href="#">{{$translate().menus.cursos_de_elearning_a_medida}}</a></li>
+            <li class="drop-parent" :class="{active:menuActive == '/curso-elearning-amedida' }"><NuxtLink to="/curso-elearning-amedida" class="menu link">{{$translate().menus.cursos_de_elearning_a_medida}}</NuxtLink>
+                <div class="drop-down">
+                    <ul>
+                        <li><a class="menu link" href="#">Produção eLearning Personalizado</a></li>
+                        <li><a class="menu link" href="#">Motion Graphics & Gamification</a></li>
+                    </ul>
+                </div>
+            </li>
             <li><a class="menu link" href="#">{{$translate().menus.formacao_certificada}}</a></li>
             <li><a class="menu link" href="#">{{$translate().menus.apps_e_servicos_web}}</a></li>
             <li><a class="menu link" href="#">{{$translate().menus.softwares_academicos}}</a></li>
