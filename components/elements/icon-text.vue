@@ -1,25 +1,32 @@
 <template>
-  <div class="d-flex icon-text">
-    <div>
 
-        <img width="50" :src="icon" alt="">
+    <div :id="id" class="d-flex icon-text">
+        <div>
+
+            <img :width="iconWidth ? iconWidth : 50" :src="icon" alt="">
+        </div>
+        <div class="icon-text-body">
+            <p><strong>{{title}}</strong></p>
+            <p>
+                <slot></slot>
+            </p>
+        </div>
+        
     </div>
-    <div class="icon-text-body">
-        <p><strong>{{title}}</strong></p>
-        <p>
-            <slot></slot>
-        </p>
-    </div>
-    
-  </div>
+
 </template>
 
 <script>
+
 import Title from './title.vue';
 export default {
     components: { Title },
 
-    props:["title","icon"]
+    props:["title","icon","id","iconWidth"],
+
+    methods:{
+        
+    }
 }
 </script>
 

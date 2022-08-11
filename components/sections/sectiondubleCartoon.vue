@@ -1,5 +1,5 @@
 <template>
-    <Section class="section-double" :id="id" @end-animation="animeCartoon" :flex="flexDirection" :background="background">
+    <Section class="section-double-cartoon" :id="id" @end-animation="animeCartoon" :flex="flexDirection" :background="background" :noPadding="noPadding" :fluid="fluid" >
         <template>
 
             <div>
@@ -7,7 +7,7 @@
             </div>
 
             
-            <div :style="{color:this.color || 'inherit'}" class="sectiondouble-text">
+            <div :style="{color:this.color || 'inherit'}" class="sectiondoubleCartoon-text">
                 <slot name="text"></slot>
             </div>
          
@@ -24,11 +24,13 @@ import { upDownAnimation } from '~/assets/js/animate';
 import Section from './section.vue';
 
 export default {
-    props: ["id", "img", "background", "flexDirection","color"],
+    props: ["id", "img", "background", "flexDirection","color","noPadding",'fluid'],
     components: { Section },
     methods:{
         animeCartoon(){
             upDownAnimation(this.$refs.cartoon);
+
+            this.$emit('end-animation');
         }
     }
 }
@@ -42,7 +44,7 @@ export default {
         max-width: 500px;
         min-width: 200px;
     }
-    .section-double{
+    .section-double-cartoon{
 
         flex-direction: row-reverse!important;
 
@@ -53,7 +55,7 @@ export default {
         }
     }
 
-    .sectiondouble-text{
+    .sectiondoubleCartoon-text{
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -65,7 +67,7 @@ export default {
     }
 
     @media screen and (max-width:900px) {
-        .section-double{
+        .section-double-cartoon{
             display: flex;
             flex-direction: row-reverse!important;
 
@@ -75,7 +77,7 @@ export default {
             div{
                 text-align: center;
             }
-            // .sectiondouble-text{
+            // .sectiondoubleCartoon-text{
 
             //     display: flex;
             //     flex-direction: column!important;

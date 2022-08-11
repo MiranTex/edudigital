@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="app">
         <navbar id="navbar"/>
         <Magicnavbar @fixed="addPadding" id="magicnavbar" />
         <Nuxt ref="body_content" id="body-content" />
@@ -9,6 +9,8 @@
 
           <a v-show="!onTop" class="btn btn-primary btnGoTop" @click="e=>{goTop(e)}" href=""><fa :icon="['fas','fa-circle-arrow-up']"/></a>
         </transition>
+
+        <BottomNav />
     </div>
 </template>
 
@@ -17,8 +19,9 @@ import navbar from '~/components/navbar/navbar.vue'
 import Footer from '~/components/footer.vue'
 import Magicnavbar from '~/components/navbar/magicnavbar.vue';
 import Swal from 'sweetalert2';
+import BottomNav from '~/components/navbar/bottomNav.vue';
 export default {
-  components: { navbar, Footer, Magicnavbar },
+  components: { navbar, Footer, Magicnavbar, BottomNav },
 
   data(){
     return{
@@ -74,6 +77,9 @@ export default {
     display: none;
   }
 
+  .app{
+    padding-bottom: 50px;
+  }
  }
 
 

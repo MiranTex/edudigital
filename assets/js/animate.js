@@ -9,7 +9,7 @@ export function translate(element){
 }
 
 
-export function upDownAnimation(target,loop=true){
+export function upDownAnimation(target,loop=true,delay=0){
     anime_({
         targets:target,
         translateY:5,
@@ -17,7 +17,7 @@ export function upDownAnimation(target,loop=true){
         easing:"easeInOutSine",
         direction:"alternate",
         loop:loop,
-        delay: 0
+        delay:delay,
       })
 }
 
@@ -39,4 +39,19 @@ export function animeNumber(element,val){
         duration:800,
         round: 1 
     })
+}
+
+export function animeList(targets){
+
+    anime_({
+        targets: targets,
+        translateX: [-50,0],
+        opacity:[0,1],
+        easing:"linear",
+        duration:1000,
+        delay:function(el,i,l){
+            return i*100
+        }
+      })
+
 }

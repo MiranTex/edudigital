@@ -23,15 +23,18 @@
 
       <Title :textAlign="'center'" style="color:var(--color-cinza)" :title="'Os nossos serviços'" />
 
-      <div class="index-nossos-serviços">
-        <Icon v-for="i in 5" :key="i+'icon'"
-          :img="links[i-1]"
+      <intersect @enter.once="animeServices">
+
+        <div class="index-nossos-serviços">
+          <Icon class="service" v-for="service in links" :key="service+'icon'"
+          :img="service"
           :text="$translate().menus.plataformas_elearning"
           :to="'/plataformas_elearning'" 
         />
+        </div>
 
+      </intersect>
     
-      </div>
 
     </Section>
 
@@ -120,16 +123,15 @@ import banner from '~/components/banner.vue'
 
 import Section from '~/components/sections/section.vue';
 import Contactform from '~/components/contactform.vue';
-import Counter from '../components/counter.vue';
 import Title from '~/components/elements/title.vue';
 import Icon from '~/components/elements/icon.vue';
-import Sectionduble from '~/components/sections/sectionduble.vue';
-import Title1 from '~/components/elements/title.vue';
-import Googlemap from '~/components/googlemap.vue';
+import Sectionduble from '~/components/sections/sectiondubleCartoon.vue';
+import { anime_ } from '~/assets/js/animate';
+import intersect from "~/assets/js/vue-intersect";
 
 
 export default Vue.extend({
-  components: { banner, Section, Contactform, Counter, Title, Icon, Sectionduble, Title1, Googlemap },
+  components: { banner, Section, Contactform, Title, Icon, Sectionduble, intersect},
 
   data(){
     return{
@@ -142,6 +144,22 @@ export default Vue.extend({
       ]
     }
   },  
+  methods:{
+    animeServices(){
+                    
+            anime_({
+            targets:document.getElementsByClassName("icon-text"),
+            translateY: [-50,0],
+            opacity:[0,1],
+            easing:"linear",
+            duration:500,
+            delay:function(el,i,l){
+                return i*100
+            }
+            })
+        
+      }
+  },
   mounted(){
   },  
 
