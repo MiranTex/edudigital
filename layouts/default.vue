@@ -7,10 +7,10 @@
 
         <transition name="fade" mode="out-in">
 
-          <a v-show="!onTop" class="btn btn-primary btnGoTop" @click="e=>{goTop(e)}" href=""><fa :icon="['fas','fa-circle-arrow-up']"/></a>
+        <a v-show="!onTop" class="btn btn-primary btnGoTop" @click="e=>{goTop(e)}" href=""><fa :icon="['fas','fa-circle-arrow-up']"/></a>
         </transition>
 
-        <BottomNav />
+        <BottomNav :route="route" />
     </div>
 </template>
 
@@ -18,14 +18,14 @@
 import navbar from '~/components/navbar/navbar.vue'
 import Footer from '~/components/footer.vue'
 import Magicnavbar from '~/components/navbar/magicnavbar.vue';
-import Swal from 'sweetalert2';
 import BottomNav from '~/components/navbar/bottomNav.vue';
 export default {
   components: { navbar, Footer, Magicnavbar, BottomNav },
 
   data(){
     return{
-      onTop:true
+      onTop:true,
+      route:"/"
     }
   },
 
@@ -52,7 +52,7 @@ export default {
 
     addPadding(){
       let padding = document.getElementById("body-content").style.paddingTop;
-      document.getElementById("body-content").style.paddingTop= padding == "58px" ? "0" : "58px"
+      document.getElementById("body-content").style.paddingTop = padding == "61px" ? "0" : "61px"
     },
 
     

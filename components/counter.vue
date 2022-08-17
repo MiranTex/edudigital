@@ -1,6 +1,6 @@
 <template>
   <div class="counter">
-    <p class="counter-title">text</p>
+    <p class="counter-title">{{title}}</p>
         <intersect @enter.once="onChange">
             <p class="counter-value" ref="counter"></p>
         </intersect>
@@ -19,7 +19,8 @@ export default {
     props:{
         title:{
             type:String,
-            required:true
+            required:true,
+            default: "title"
         },
         val:{
             type:Number,
@@ -51,7 +52,7 @@ export default {
 <style scoped lang="scss">
     .counter-title{
         font-size: 1.6rem;
-        font-weight: 700;
+        font-weight: 600;
     }
     .counter-value{
         font-size: 1.4rem;

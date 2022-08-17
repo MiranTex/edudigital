@@ -45,11 +45,12 @@ export default {
 
     .title-text{
         line-height: 50px;
-        /* text-align: center; */
     }
 
     h1{
         font-size: 2.8rem;
+        text-align: center;
+
     }
 
     h2{

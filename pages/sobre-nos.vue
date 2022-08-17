@@ -10,7 +10,7 @@
           e desenvolvemos conteúdos para melhorar a igualdade entre as pessoas, favorecer o acesso a formação de qualidade e promover a aprendizagem ao longo da vida.
           <br>
           <br>
-          <strong>Nós acreditamos que a Aprendizagem nunca acaba.</strong>
+          <strong style="color:#fff">Nós acreditamos que a Aprendizagem nunca acaba.</strong>
       </template>
 
     </banner>
@@ -46,7 +46,7 @@
         >
         <template #text>
             
-            <IconText class="motivos" v-for="motivo in motivos" :key="motivo.id" :title="motivo.title" :icon="motivo.icon" :icon-width="70" >
+            <IconText class="motivos" v-for="motivo in motivos" :color="'#fff'" :key="motivo.id" :title="motivo.title" :icon="motivo.icon" :icon-width="70" >
                {{motivo.text}}
             </IconText>
         </template>
@@ -60,8 +60,8 @@
         @end-animation="animeBadges"
     >
 
-        <template #left> <img class="badges" width="300" src="https://edudigital.pt/home/images/top3.jpg" alt=""></template>
-        <template #right><img class="badges" width="300" src="https://edudigital.pt/home/images/top50.png" alt=""></img></template>
+        <template #left> <img class="badges" width="300" src="https://edudigital.pt/home/images/top3.jpg" alt=""/></template>
+        <template #right><img class="badges" width="300" src="https://edudigital.pt/home/images/top50.png" alt=""/></template>
 
     </Sectiondouble>
 
@@ -70,7 +70,7 @@
         :id="'sobre-nos-parceria'"
         style="color:#fff"
         :flex="'column'"
-        :background="'var(--color-verde)'"
+        :background="'#d35640'"
     >
         <div>
             <Title :title="'Parcerias'" />
@@ -84,11 +84,66 @@
 
     </Section>
 
-
     <Section
         :id="'sobre-nos-parceiros-carousel'"
     >
         <Carousel/>
+    </Section>
+
+
+    <Section
+        :id="'sobre-nos-nossa-experiencia'"
+        style="color:#fff"
+        :flex="'column'"
+        :background="'var(--color-verde)'"
+    >
+        <div class="flex">
+            <Title :textAlign="'center'" :title="'A nossa experiência'" />
+            <div style="margin-top: 20px">
+                <p>Já fazemos isto há algum tempo e a nossa equipa 
+                    de especialistas cria conteúdos e soluções tecnológicas que 
+                    envolvem e dão competências aos nossos formandos espalhados pelo 
+                    mundo inteiro, incluindo com o nosso suporte técnico e pedagógico.
+                </p>
+
+            </div>
+            <div class="experiencia-numbers-container" style="margin-top: 100px; display:flex; justify-content: center;">
+
+                <div style="width:80%" class="d-flex justify-between experiencia-numbers">
+                    <Counter :title="'Utilizadores ativos'" :val="90000"/>
+                    <Counter :title="'Clientes pelo mundo'" :val="100" />
+                    <Counter :title="'Plataformas online'" :val="80" />
+    
+                </div>
+            </div>
+            
+        </div>
+
+    </Section>
+
+    <Section
+        :id="'sobre-nos-reponsabilidade-social'"
+        :background="'var(--color-vermelho)'"
+        style="color:#fff"
+        :flex="'column'"
+    >
+        <Title :title="'Responsabilidade Social'" :textAlign="'center'" style="margin-bottom:30px" />
+
+        <div class="d-flex flex-column">
+            <p style="margin-bottom:30px">Na EDUdigital, acreditamos que devemos retribuir às organizações sem fins lucrativos e às pessoas mais carenciadas, 
+                aquilo que a própria sociedade nos dá, num dinamismo de retribuição pelo trabalho que temos, pelos projetos que a 
+                nossa equipa desempenha e que geram valor acrescentado para pessoas que trabalham connosco, parceiros e fornecedores, 
+                nos vários mercados onde atuamos. Contribuímos para projetos de solidariedade, causas sociais ou educativas, 
+                nomeadamente para entidades sem fins lucrativos que apoiam pessoas de diferentes faixas etárias em vários em 
+                vias de desenvolvimento, sobretudo África.
+            </p>
+
+            <div class="d-flex justify-between wrap">
+                <Responsabilidade :nome="'EDUdigital'" :regiao="'Portugal'" :entidade="'Organização Não Governamental para Desenvolvimento'" :apoio="'Apadrinhamento de estudantes do ensino secundário em Moçambique, através de apoio de bolsas de estudo.'" />
+                <Responsabilidade :nome="'EDUdigital'" :regiao="'Portugal'" :entidade="'Organização Não Governamental para Desenvolvimento'" :apoio="'Apadrinhamento de estudantes do ensino secundário em Moçambique, através de apoio de bolsas de estudo.'" />
+                <Responsabilidade :nome="'EDUdigital'" :regiao="'Portugal'" :entidade="'Organização Não Governamental para Desenvolvimento'" :apoio="'Apadrinhamento de estudantes do ensino secundário em Moçambique, através de apoio de bolsas de estudo.'" />
+            </div>
+        </div>
     </Section>
 
     <Sectionduble
@@ -98,7 +153,7 @@
       :color="'var(--color-cinza)'"
     >
       <template #text>
-        <Title :title="'Recrutamento'" />
+        <Title :title="'Recrutamento'"/>
         <p>Interessado em pertencer à nossa equipa? Na EDUdigital,
             trabalhamos em várias geografias, partilhamos projetos comuns
             e valorizamos o trabalho em equipa sem fronteiras, numa visão
@@ -106,7 +161,12 @@
             de língua portuguesa
         </p>
         <div>
-          <a class="btn btn-secondary" target="_blank" href="https://recrutamento.edudigital-learn.com/">Candidatura espontânea</a>
+          <a class="btn btn-secondary" target="_blank" href="https://recrutamento.edudigital-learn.com/">Candidatura espontânea <v-icon
+          dark
+          right
+        >
+          mdi-open-in-new
+        </v-icon></a>
         </div>
       </template>
     </Sectionduble>
@@ -123,8 +183,11 @@ import IconText from '~/components/elements/icon-text.vue';
 import {v4 as uidv4} from "uuid";
 import Sectiondouble from '~/components/sections/sectiondouble.vue';
 import Carousel from '../components/carousel.vue';
+import Responsabilidade from '~/components/responsabilidade.vue';
+import Counter from '~/components/counter.vue';
+
 export default {
-    components: { Section, Title, Sectionduble, IconText, Sectiondouble, Carousel },
+    components: { Section, Title, Sectionduble, IconText, Sectiondouble, Carousel, Responsabilidade, Counter },
 
     data(){
         return{
@@ -208,6 +271,15 @@ export default {
             .motivos{
                 margin: 0 300px;
             }
+        }
+
+        .experiencia-numbers{
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .experiencia-numbers-container{
+            margin: auto;
         }
     }
 </style>

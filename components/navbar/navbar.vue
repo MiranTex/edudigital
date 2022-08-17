@@ -15,8 +15,8 @@
                     <li :class="{active:menuActive == '/fale-connosco' }"><NuxtLink  class="menu link" to="/fale-connosco">Fale Connosco</NuxtLink></li>
                     <li :class="{active:menuActive == '/sobre-nos' }"><NuxtLink  class="menu link" to="/sobre-nos">Sobre Nós</NuxtLink></li>
                     <li><NuxtLink  class="menu link" to="/">Case Studies</NuxtLink></li>
-                    <li><a  class="menu link" target="_blank" href="https://marketplace.edudigital-learn.com">Marketplace</a></li>
-                    <li><NuxtLink  class="btn btn-primary btn-menu" to="/">eLearning</NuxtLink></li>
+                    <li><a  class="menu link" target="_blank" href="https://marketplace.edudigital-learn.com">Marketplace <v-icon  size="17" >mdi-open-in-new</v-icon></a></li>
+                    <li><NuxtLink  class="btn btn-primary btn-menu" to="/">eLearning <v-icon  size="17" dark>mdi-open-in-new</v-icon></NuxtLink></li>
                 </ul>
             </nav>
         </div>

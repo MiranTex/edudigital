@@ -33,7 +33,8 @@ export default {
     '@nuxt/typescript-build',
     '@nuxtjs/fontawesome',
     '@nuxtjs/dotenv',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/pwa'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -42,7 +43,11 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+
+    'nuxt-buefy',
   ],
+
+  buefy: { /* buefy options */ },
 
   fontawesome: {
     component: 'Fa',
@@ -61,8 +66,16 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    icon:{
+      source:"/.static/icon.png",
+      sizes: [64, 120, 144, 152, 192, 384, 512]
+    },
     manifest: {
-      lang: 'en',
+      lang: 'pt',
+      name:"EDUdigital",
+      meta: {
+        charset:"utf-8"
+      }
     },
   },
 

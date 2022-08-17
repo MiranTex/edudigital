@@ -29,7 +29,7 @@
           <Icon class="service" v-for="service in links" :key="service+'icon'"
           :img="service"
           :text="$translate().menus.plataformas_elearning"
-          :to="'/plataformas_elearning'" 
+          :to="'/plataformas-elearning'" 
         />
         </div>
 
@@ -72,7 +72,7 @@
     </Sectionduble>
 
     <Sectionduble
-      :id="'index-curso-ekearning-a-medida'"
+      :id="'index-curso-elearning-a-medida'"
       :background="'#00897b'"
       :img="require('static/cartoon/index_curso_elearning_a_medida.png')"
       :flexDirection="'row'"
@@ -83,7 +83,7 @@
         <p>Trabalhe com a nossa equipa de designers, para produção de eLearning à medida, gamification e guiões pedagógicos
            atraentes. Ou simplesmente, coloque o seu branding nos nossos cursos de catálogo, em módulos feitos por especialistas e responsivos a qualquer dispositivo.</p>
         <div>
-          <NuxtLink class="btn btn-primary" to="/">Conheeça o nosso elearning à medida</NuxtLink>
+          <NuxtLink class="btn btn-primary" to="/">Conheça o nosso elearning à medida</NuxtLink>
         </div>
         <div>
           <NuxtLink class="btn btn-primary" to="/">Conheça nosso catálogo de cursos</NuxtLink>

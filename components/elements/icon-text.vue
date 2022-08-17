@@ -6,8 +6,8 @@
             <img :width="iconWidth ? iconWidth : 50" :src="icon" alt="">
         </div>
         <div class="icon-text-body">
-            <p><strong>{{title}}</strong></p>
-            <p>
+            <p ><strong :style="[color ? {color:color} :{color:'#fff'}]">{{title}}</strong></p>
+            <p :style="[color ? {color:color} :{color:'#fff'}]">
                 <slot></slot>
             </p>
         </div>
@@ -22,8 +22,10 @@ import Title from './title.vue';
 export default {
     components: { Title },
 
-    props:["title","icon","id","iconWidth"],
-
+    props:["title","icon","id","iconWidth","color"],
+    mounted(){
+      
+    },
     methods:{
         
     }

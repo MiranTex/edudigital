@@ -71,7 +71,7 @@
         <p>Somos uma entidade certificada pela DGERT (normas da União Europeia) para lecionar formação de eFormadores LMS ou Administradores de Plataformas. Ambas as formações são para transferir conhecimento para os clientes, seja para dinamizar pedagogicamente as formações online, seus cursos, formandos, seja para configurar tecnicamente a plataforma, sua estrutura, perfis, autenticações, entre outros.
         Fale Connosco</p>
         <div>
-          <NuxtLink class="btn btn-secondary" to="/fale-conosco">Fale Connosco</NuxtLink>
+          <NuxtLink class="btn btn-secondary" to="/fale-connosco">Fale Connosco</NuxtLink>
         </div>
       </template>
     </Sectionduble>

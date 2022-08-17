@@ -20,11 +20,7 @@ export default {
      */
     redirect(flag){
       flag = flag.toUpperCase()
-      // Swal.fire({
-      //   icon:"info",
-      //   text:`Está a ser redirecionado para o site de ${flag} `
-      // })
-
+   
       let timerInterval
       Swal.fire({
         html: `Está a ser redirecionado para o site de ${flag} `,

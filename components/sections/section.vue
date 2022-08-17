@@ -86,7 +86,8 @@ export default {
 
             return{
                 width:this.fluid ? "100%" : "75%",
-                padding: this.noPadding ? "0!important" : "15px"
+                padding: this.noPadding ? "0!important" : "15px",
+                alignItems: this.itemAlign
             }
         }
     },

@@ -1,161 +1,89 @@
 <template>
-  <header :class="fixed ? 'fixed' : ''">
+  <b-navbar :shadow=true wrapper-class="magicnavbar" >
+        <template #brand>
+            <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                <Logo 
+                :width="120"
+                />
+            </b-navbar-item>
+        </template>
+        <template #start>
+            <b-navbar-dropdown tag="nuxt-link" :to="{path:'/plataformas-elearning'}" label="Plataformas eLearning">
+                <b-navbar-item tag="nuxt-link" :to="{path:'/fale-connosco'}">
+                  Plataformas Open-Source
+                </b-navbar-item>
+                <b-navbar-item href="#">
+                    Plataformas Totara
+                </b-navbar-item>
+                <b-navbar-item href="#">
+                    Hosting gerido & Cloud
+                </b-navbar-item>
+            </b-navbar-dropdown>
 
-    <div class="header-button">
-      <a @click.prevent="goTo('/')" href="#" class="logo-link"><Logo :width="150" class="logo-magicnavbar" /></a>
-      <button @click="toogleMagic" type="button" class="btn"><fa :icon="['fas', 'bars']" /></button>
+            <b-navbar-dropdown tag="nuxt-link" :to="{path:'/cursos-elearning-amedida'}" label="Cursos de eLearning à medida">
+                <b-navbar-item tag="nuxt-link" :to="{path:'/fale-connosco'}">
+                  Produção eLearning Personalizado
+                </b-navbar-item>
+                <b-navbar-item href="#">
+                    Motion Grafics e Gamification
+                </b-navbar-item>
+            </b-navbar-dropdown>
 
-    </div>
-    
- 
-    <transition name="fade" mode="out-in">
+            <b-navbar-dropdown tag="nuxt-link" :to="{path:'/'}" label="Formação Certificada">
+                <b-navbar-item tag="nuxt-link" :to="{path:'/fale-connosco'}">
+                  Cursos eLearning de Catálogo
+                </b-navbar-item>
+                <b-navbar-item href="#">
+                    Consultoria Pedagógica & Formação 
+                </b-navbar-item>
+            </b-navbar-dropdown>
 
-      <div v-show="fixed" class="menus-magicnavbar">
-        <nav>
-          <ul>
-           <li class="drop-parent"><a class="menu link" href="#" @click.prevent="goTo('/plataformas-elearning')">Plataformas eLearning</a>
-                <div class="drop-down">
-                    <ul>
-                        <li><a class="menu link" href="#">Plataformas Open-source</a></li>
-                        <li><a class="menu link" href="#">Plataformas Totara</a></li>
-                        <li><a class="menu link" href="#">Hosting Gerido & Cloud</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="drop-parent"><a class="menu link" href="#">Cursos de Elearning à medida</a>
-            <div class="drop-down">
-                    <ul>
-                        <li><a class="menu link" href="#">Produção eLearning Personalizado</a></li>
-                        <li><a class="menu link" href="#">Motion Graphics & Gamification</a></li>
-                     </ul>
-                </div>
-            </li>
-            <li><a class="menu link" href="#">Formação certifiada</a></li>
-            <li><a class="menu link" href="#">APPs & Serviços Web</a></li>
-            <li><a class="menu link" href="#">Software Académicos</a></li>
-          </ul>
-        </nav>
+            <b-navbar-dropdown tag="nuxt-link" :to="{path:'/'}" label="APPs & Serviços Web">
+                <b-navbar-item tag="nuxt-link" :to="{path:'/fale-connosco'}">
+                  Integração e Migração de Dados
+                </b-navbar-item>
+                <b-navbar-item href="#">
+                    Config Avançadas e Autenticação
+                </b-navbar-item>
+                <b-navbar-item href="#">
+                    Sistemas eLibrary 
+                </b-navbar-item>
+            </b-navbar-dropdown>
 
-        <Flags class="flags-magicnavbar" />
+            <b-navbar-dropdown tag="nuxt-link" :to="{path:'/'}" label="Softwares Académicos">
+                <b-navbar-item tag="nuxt-link" :to="{path:'/fale-connosco'}">
+                  Sistema Gestão eSchooling
+                </b-navbar-item>
+                <b-navbar-item href="#">
+                    Sistema Anti-Plágio
+                </b-navbar-item>
+            </b-navbar-dropdown>
 
-      </div>
-    </transition>
-  </header>
+
+        </template>
+        <template #end>
+          <Flags style=" width: 80%; margin-left:auto; margin-right:auto; margin-top:30px" />
+        </template>
+    </b-navbar>
 </template>
 
 <script>
 import Logo from '../logo.vue';
-import { anime_} from '~/assets/js/animate';
 import Flags from '../flags.vue';
+
 export default {
     components: { Logo, Flags },
-    data(){
-      return{
-        fixed:false
-
-      }
-    },
-
-    methods:{
-      goTo(url){
-
-        this.toogleMagic();
-        this.$router.push(url);
-      },
-
-      toogleMagic(){
-        this.fixed=!this.fixed
-
-        this.$emit("fixed");
-      }
-
-    }
 
 }
 </script>
 
 <style lang="scss" scoped>
-  .logo-link{
-    display: flex;
-    align-items: center;
-  }
-  header{
-    background: #fff;
-    padding: 10px 30px;
+#magicnavbar{
 
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .header-button{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .fixed{
-    width: 100%;
-    z-index: 99999999;
-    position: fixed;
-  }
-
-  .menus-magicnavbar{
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    z-index: 999999;
-    background: #fff;
-    top: 55px;
-    left: 0;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
-
-    .flags-magicnavbar{
-
-      width: 40%;
-      margin: auto;
-    }
-
-    nav{
-      // border: 1px solid red;
-      text-align: center;
-      margin-bottom: 10px;
-
-      ul{
-        li{
-          border-bottom: 1px solid var(--color-light);
-          padding: 10px 0;
-          a{
-          }
-        }
-      }
+  a{
+    &:hover{
+      color: var(--color-primary);
     }
   }
-  .drop-down{
-    position: relative;
-    box-shadow: none;
-    padding-top: 0;
-    border-radius: 0;
-    margin: auto;
-    top: none;
-    border-top: 1px solid var(--color-cinza);
-    border-bottom: 1px solid var(--color-cinza);
-
-  }
-
-  .logo-magicnavbar{
-    display: flex;
-    padding: 0;
-    align-items: center;
-  }
-
-  button{
-    border: none;
-    border-radius: 2px;
-  }
-
-  
+}
 </style>

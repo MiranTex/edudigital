@@ -15,6 +15,8 @@ export default {
 <style scoped lang="scss">
     .logo{
         padding: 10px 0px;
+        display: flex;
+        justify-content: center;
 
         img{
             height: auto!important;
