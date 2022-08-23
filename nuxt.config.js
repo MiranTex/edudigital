@@ -21,7 +21,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    "~/plugins/langHelper.js"
+    "~/plugins/langHelper.js",
+    '~/plugins/uuidHelper.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -77,6 +78,10 @@ export default {
         charset:"utf-8"
       }
     },
+  },
+  server:{
+    host:"192.168.15.14",
+    port:8001
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

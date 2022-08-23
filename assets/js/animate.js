@@ -21,6 +21,18 @@ export function upDownAnimation(target,loop=true,delay=0){
       })
 }
 
+export function leftRightAnimation(target,loop=true,delay=0){
+    anime_({
+        targets:target,
+        translateX:5,
+        // duration:3000,
+        easing:"easeInOutSine",
+        direction:"alternate",
+        loop:loop,
+        delay:delay,
+      })
+}
+
 export function custonAnime(params){
     anime(params);
 }

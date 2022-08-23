@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
-    <logo :width="600"/>
+  <div class="container_">
+    <logo :width="300"/>
     <!-- <h1 class="error-code">Error {{error.statusCode}}</h1> -->
-    <h1 class="error-text" v-if="error.statusCode === 404">Page not found</h1>
+    <h1 class="error-text" v-if="error.statusCode === 404">Página não encontrada</h1>
     <h1 class="error-text" v-else>An error occurred</h1>
     <NuxtLink class="btn btn-primary btn-return" to="/">Página incial</NuxtLink>
   </div>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .container{
+  .container_{
     display: flex;
     min-height: 100vh;
     flex-direction: column;

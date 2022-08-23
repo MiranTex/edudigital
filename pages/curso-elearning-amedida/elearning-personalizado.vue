@@ -1,0 +1,70 @@
+<template>
+  <div>
+    <Banner 
+        :backgroundImage="'	https://edudigital.pt/images/bigstock-Two-Smiling-Businessmen-Or-Pro-241216258%20.jpg'"
+        :title="'Produção eLearning personalizado'"
+        :columnsTemplate="'2fr 1fr'"
+        :buttonActionText="'Agenda a sua reunião'"
+        :buttonActionHref="'/fale-connosco'"
+        
+    >
+        <template v-slot:text>
+          Fazemos desenvolvimento de cursos de eLearning à medida, de A até Z. 
+          A partir de conteúdos pedagógicos enviados por si ou concebidos pela 
+          nossa equipa, adaptamos cada curso à sua organização, com interatividade, 
+          conversão de formato presencial para online, com design da sua marca, 
+          compatível com vários dispositivos e em formato SCORM.
+      </template>
+    </Banner>
+
+    <SectiondubleCartoon
+        :id="'elearning-personalizado-design'"
+        :background="'#fff'"
+        :img="'https://edudigital.pt/home/images/cursos_edudigital_1.png'"
+        :flexDirection="'row'"
+        :color="'#616161'"
+      >
+        <template v-slot:text>
+            <Title :title="'Design personalizado de cursos eLearning'"/>
+            <p>
+                Cada curso à medida, exige uma entrega de sucesso e o nosso processo de 
+                envolvimento com o cliente. Neste processo a que 
+                chamamos ADDIE, temos de analisar o público e necessidades, fazer o design instrucional, 
+                maximizar o feedback nas primeiras versões, desenvolver um SCORM compatível com a sua plataforma e por fim, 
+                fazer uma avaliação das reações.
+            </p>
+        </template>
+      </SectiondubleCartoon>
+
+    <VantagemServicos 
+        :vantagens="vantagens" 
+        :id="'hosting-gerido-servicos-vantagens'"    
+        :background="'#D35B40'"
+        :color="'#fff'"
+        :title="'Serviços e Vantagens'"
+    />
+
+    <Contactform />
+
+  </div>
+</template>
+
+<script>
+import CursoseLEarningMedidaController from '~/controllers/CursoseLEarningMedidaController'
+import VantagemServicos from '~/components/elements/vantagemServicos.vue';
+import Contactform from '~/components/contactform.vue';
+import SectiondubleCartoon from '~/components/sections/sectiondubleCartoon.vue';
+import Title from '~/components/elements/title.vue';
+export default {
+    data() {
+        return {
+            vantagens: CursoseLEarningMedidaController.elearningPersonalizado.vantagens
+        };
+    },
+    components: { VantagemServicos, Contactform, SectiondubleCartoon, Title }
+}
+</script>
+
+<style>
+
+</style>

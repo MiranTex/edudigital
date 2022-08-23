@@ -10,7 +10,7 @@
         <a v-show="!onTop" class="btn btn-primary btnGoTop" @click="e=>{goTop(e)}" href=""><fa :icon="['fas','fa-circle-arrow-up']"/></a>
         </transition>
 
-        <BottomNav :route="route" />
+        <BottomNav id="bottomNav" :route="route" />
     </div>
 </template>
 
@@ -26,6 +26,12 @@ export default {
     return{
       onTop:true,
       route:"/"
+    }
+  },
+
+  watch:{
+    route(_new,_hold){
+      this.route=_new;
     }
   },
 
@@ -60,16 +66,31 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
+#bottomNav{
+  display: none;
+}
 
  #magicnavbar{
   display: none;
-  
+
+ }
+
+ #body-content{
+  margin-top: 151px;
  }
 
  @media screen and (max-width:950px ){
 
+ #body-content{
+  margin-top: 0;
+ }
   #magicnavbar{
+    display: block;
+  }
+
+  #bottomNav{
     display: block;
   }
 

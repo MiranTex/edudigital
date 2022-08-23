@@ -1,21 +1,21 @@
 <template>
     <v-bottom-navigation class="menuBottom" v-model="value">
-        <v-btn value="/">
+        <v-btn @click="goTo" value="/">
             <span>Inicio</span>
             <v-icon>mdi-home</v-icon>
         </v-btn>
 
-        <v-btn value="/fale-connosco">
+        <v-btn @click="goTo" value="/fale-connosco">
             <span>Fale Connosco</span>
             <v-icon>mdi-message-text</v-icon>
         </v-btn>
 
-        <v-btn value="/sobre-nos">
+        <v-btn @click="goTo" value="/sobre-nos">
             <span>Sobre nós</span>
             <v-icon>mdi-information</v-icon>
         </v-btn>
 
-        <v-btn value="nearby">
+        <v-btn @click="goTo" value="nearby">
             <span>Case Studies</span>
             <v-icon>mdi-domain</v-icon>
         </v-btn>
@@ -26,9 +26,8 @@
 export default {
     watch:{
         value(_new,_hold){
-
-            this.$router.push(_new);
-            
+            // this.$router.push(_new);
+         
         },
         $route(_new,_old){
 
@@ -43,6 +42,15 @@ export default {
         return{
             value:""
         }
+    },
+
+    methods:{
+        goTo(){
+            setTimeout(() => {
+                this.$router.push(this.value);
+                
+            }, 20);
+        }
     }
 }
 </script>
@@ -54,15 +62,17 @@ export default {
         position:fixed;
         bottom: 0;
         box-shadow: -1px -1px 10px rgba(80, 80, 80, 0.26)!important;
-        z-index: 999;
-        padding: 20px auto;
+        z-index: 9999999;
+        /* padding: 30px auto; */
         display: flex;
         align-items: center;
+        /* height: 60px!important; */
     }
 
     @media screen and (max-width:950px ){
         .v-bottom-navigation{
             display: flex!important;
+            width: 100%;
         }
     }
 

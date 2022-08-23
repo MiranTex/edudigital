@@ -9,10 +9,10 @@
         </template>
         <template #start>
             <b-navbar-dropdown tag="nuxt-link" :to="{path:'/plataformas-elearning'}" label="Plataformas eLearning">
-                <b-navbar-item tag="nuxt-link" :to="{path:'/fale-connosco'}">
+                <b-navbar-item tag="nuxt-link" :to="{path:'/plataformas-elearning/plataformas-open-source'}">
                   Plataformas Open-Source
                 </b-navbar-item>
-                <b-navbar-item href="#">
+                <b-navbar-item tag="nuxt-link" :to="{path:'/plataformas-elearning/plataformas-totara'}">
                     Plataformas Totara
                 </b-navbar-item>
                 <b-navbar-item href="#">
@@ -20,7 +20,7 @@
                 </b-navbar-item>
             </b-navbar-dropdown>
 
-            <b-navbar-dropdown tag="nuxt-link" :to="{path:'/cursos-elearning-amedida'}" label="Cursos de eLearning à medida">
+            <b-navbar-dropdown tag="nuxt-link" :to="{path:'/curso-elearning-amedida'}" label="Cursos de eLearning à medida">
                 <b-navbar-item tag="nuxt-link" :to="{path:'/fale-connosco'}">
                   Produção eLearning Personalizado
                 </b-navbar-item>

@@ -232,8 +232,12 @@ export default {
 
         animeBadges(){
             
-            upDownAnimation(document.getElementsByClassName("badges",false,(el,i,l)=>{return i*500}))
+            upDownAnimation(document.getElementsByClassName("badges"),true,(el,i,l)=>{return i*500})
         }
+    },
+
+    mounted(){
+        document.title = "Sobre nós"
     }
 }
 </script>
