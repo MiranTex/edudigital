@@ -54,7 +54,7 @@
                 <div class="drop-down">
                     <ul>
                         <li><NuxtLink class="menu link" to="/app-servicos-web/integracao-migracao-dados">Integração & Migração de Dados</NuxtLink></li>
-                        <li><NuxtLink class="menu link" to="/app-servicos-web">Config Avançadas  & Autenticação</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/app-servicos-web/configuracao-avancada">Config Avançadas  & Autenticação</NuxtLink></li>
                         <li><NuxtLink class="menu link" to="/app-servicos-web">Sistemas eLibrary</NuxtLink></li>
                     </ul>
                 </div>

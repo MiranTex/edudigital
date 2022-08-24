@@ -48,7 +48,7 @@
       <SectiondubleCartoon
         :id="'cursos-medida-gamification'"
         :background="'#D35640'"
-        :img="require('~/assets/img/cartoom/Grupo_819_.png')"
+        :img="require('~/assets/img/cartoon/Grupo_819_.png')"
         :flexDirection="'row-reverse'"
         :color="'#fff'"
       >

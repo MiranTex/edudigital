@@ -38,5 +38,57 @@ export default {
                 text: "Escolha uma equipa que tem a experiência para lhe indicar se o processo de migração deve ser faseado ou em apenas 2 dias, mantendo a base de dados antiga ou não."
             }
         ]
-    }
+    },
+
+    configuracaoAvancada:{
+        vantagem:[
+
+            {
+                icon:"https://edudigital.pt/home/images/InteracaoWebConference.png",
+                title:"Integração com Web Conference",
+                text:"É possível integrar vários softwares de web conference com os nossos LMS e que facilitam o live training/tutoria, a gravação de sessões para visualização assíncrona e a partilha de ecrãs/ficheiros colaborativa."
+            },
+            {
+                icon:"https://edudigital.pt/home/images/Testing_and_Quality-01.png",
+                title:"Testagem e Qualidade",
+                text:"Quando expandimos a sua plataforma com plugins ou lançamento de novas ferramentas temos um processo de testes. O nosso controlo de qualidade exige de nós técnicas para adequar o LMS ao cliente"
+            },
+            {
+                icon:"https://edudigital.pt/home/images/GerirFormaoPresencial-01.png",
+                title:"Gerir a formação presencial",
+                text:"Combine a formação eLearning, com ações de live training e com a criação de sessões presenciais, toda a gestão de assiduidade e organização da sala de formação."
+            },
+            {
+                icon:"https://edudigital.pt/home/images/ConstruoDeRelatrio-01.png",
+                title:"Construção de relatórios",
+                text:"Para tomar as decisões em tempo útil, os nossos técnicos configuram relatórios personalizados, para extrair informação com vários filtros e com a opção de gráficos que resumem dados formativos."
+            },
+            {
+                icon:"https://edudigital.pt/home/images/PlanosDeFormaoeHierarquias-01.png",
+                title:"Planos de formação e hierarquias",
+                text:"Com a ajuda dos nossos especialistas, desenvolva competências especificas para os seus colaboradores, de acordo com o seu cargo e monitorize o progresso através dos registos de formação."
+            },
+            {
+                icon:"https://edudigital.pt/home/images/Multidispositivo-01.png",
+                title:"Multi-dispositivo",
+                text:"Quaisquer que sejam os seus formandos, o nosso desenvolvimento responsivo vai responder. Criamos plataformas que são consistentes e acessíveis a partir de todos os tipos de dispositivos."
+            }
+        ],
+
+        configuracaoAvancadaAutenticacao:{
+            vantagens:[
+                {
+                    icon: "https://edudigital.pt/home/images/Grupo_608.png",
+                    title: "Active Directory ou Single Sign On",
+                    text: "Com as funcionalidades nucleares já desenvolvidas pelas nossas plataformas open-source, o nosso trabalho de configurações de autenticação é feito internamente e exigirá apenas algumas trocas de informação com a sua equipa."
+                },
+                {
+                    icon: "https://edudigital.pt/home/images/Autenticao_simplificada.png",
+                    title: "Autenticação simplificada",
+                    text: "Nós não estamos agarrados a softwares proprietários e fazemos a inserção de plugins que permitem fazer autenticação a partir de fornecedores externos como a Google Suite ou Microsoft Suite."
+                }
+            ]
+        }
+    },
+    
 }

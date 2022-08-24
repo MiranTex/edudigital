@@ -106,7 +106,7 @@
       <SectiondubleCartoon
         :id="'app-servico-web-elibrary'"
         :background="'#d35640'"
-        :img="require('~/assets/img/cartoom/Grupo_1030_.png')"
+        :img="require('~/assets/img/cartoon/Grupo_1030_.png')"
         :flexDirection="'row'"
         :color="'#fff'"
       >

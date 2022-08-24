@@ -60,7 +60,7 @@ export function animeList(targets){
         translateX: [-50,0],
         opacity:[0,1],
         easing:"linear",
-        duration:1000,
+        duration:500,
         delay:function(el,i,l){
             return i*100
         }
