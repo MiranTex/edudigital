@@ -97,7 +97,7 @@ export default {
             if(this.shouldAnime)
                 this.animation = anime_({
                     targets: document.getElementById(this.id),
-                    duration: 1000,
+                    duration: 500,
                     opacity:[0,1],
                     // translateY:[-50,0],
                     easing:"linear",

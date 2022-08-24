@@ -177,10 +177,14 @@ export default {
             #banner-content{
                 width: 100%;
                 flex: none;
+                margin: auto!important;
             }
 
+            margin: auto;
+            width: 100%;
 
             grid-template-columns: 1fr!important;
+           
         }
 
     }

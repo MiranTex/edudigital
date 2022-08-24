@@ -2,7 +2,7 @@
   <div>
     <banner 
     :backgroundImage="'https://edudigital.pt/images/bigstock-Two-Smiling-Businessmen-Or-Pro-241216258%20.jpg'" 
-    :columnsTemplate="'1fr 1fr'"
+    :columnsTemplate="'3fr 1fr'"
     :title="'Plataformas eLearning Open-source'"
     :buttonActionText="'Fale Connosco'"
     :buttonActionHref="'/fale-connosco'"
@@ -25,17 +25,18 @@
 
       <Section 
       id="plataformas-open-source-servicos-vantagens-content"
-      :fluid="true"
       :noPadding="true"
       :contentJustify="'start'"
       :shouldAnime="false"
       @end-animation="animeIcons"
       >
-        <div v-for="(vantagem,i) in vantagens" :key="i+id()" class="is-align-self-baseline">
-          <IconText class="vantagem" v-for="(vant,j) in vantagem" :key="j+id()" :id="j+id()" :title="vant.title" :icon="vant.icon">
+        <div class="vantagem-container">
+          
+          <IconText color="#616161" class="vantagem" v-for="(vant,j) in vantagens" :key="j+$id()" :id="j+$id()" :title="vant.title" :icon="vant.icon">
             {{vant.text}}
           </IconText>
         </div>
+
 
       </Section>
 
@@ -84,77 +85,20 @@
 import Section from '~/components/sections/section.vue';
 import Title from '~/components/elements/title.vue';
 import IconText from '~/components/elements/icon-text.vue';
-import {v4 as uidv4} from "uuid";
+
 import Contactform from '~/components/contactform.vue';
 import Sectionduble from '~/components/sections/sectiondubleCartoon.vue';
-import { animeList, anime_ } from '~/assets/js/animate';
+import { animeList } from '~/assets/js/animate';
+import PlataformaseLearningController from '~/controllers/PlataformaseLearningController';
 export default {
     components: { Section, Title, IconText, Contactform, Sectionduble },
     
     data(){
       return{
-        vantagens:[
-          [
-            {
-              icon:"https://edudigital.pt/home/images/Grupo_604.png",
-              title:"Planos formação & Estruturação LMS",
-              text:"Estruture planos de formação, sequenciais, baseados em currículos, competências ou uma estrutura com base nas necessidades da sua organização a partir de uma plataforma intuitiva e adaptada à necessidade da sua organização."
-            },
-
-            {
-              icon:"https://edudigital.pt/home/images/Grupo_735.png",
-              title:"Hosting gerido & updates",
-              text:"Faça o alojamento em servidores com back-ups diários, atualizações de software, acessos em segurança e suporte 24h/7d."
-            },
-
-            {
-              icon:"https://edudigital.pt/home/images/Grupo_788.png",
-              title:"Integração e Migração de Dados",
-              text:"Conecte outros softwares à Plataforma eLearning, para comunicação de dados e/ou migração de utilizadores ou pautas entre ambos."
-            },
-
-            {
-              icon:"https://edudigital.pt/home/images/Grupo_790.png",
-              title:"App mobile",
-              text:"Utilize a plataforma em qualquer smartphone, tablet ou PC, com a sincronização ativa com o LMS, desenvolvendo uma user experience e acesso ao LMS em vários dispositivos, através do nosso interface intuitivo."
-            },
-
-          ],
-          [
-            { 
-              icon:"https://edudigital.pt/home/images/Grupo_604.png",
-              title:"Design Personalizado",
-              text:"Plataforma com o seu branding, UX design, painéis de controlo e funcionalidades à medida."
-            },
-
-            { 
-              icon:"https://edudigital.pt/home/images/Grupo_749.png",
-              title:"Relatórios & plug-ins",
-              text:"Acompanhe o progresso dos formandos através de relatórios personalizados, pautas, certificados de formação e inserção de dezenas de plug-ins úteis que configuramos no LMS."
-            },
-
-
-            { 
-              icon:"https://edudigital.pt/home/images/Grupo_785.png",
-              title:"Formação LMS",
-              text:"Realize formação de eFormadores ou de Administradores da Plataforma, para criar audiências dinâmicas, gerir inscrições, perfis e dinamização pedagógica do LMS."
-            },
-
-
-            { 
-              icon:"https://edudigital.pt/home/images/Grupo_786.png",
-              title:"Suporte técnico-pedagógico",
-              text:"A nossa equipa especializada responde e ajuda-o via telefone ou online (24h/7d) em vários incidentes técnicos ou pedagógicos."
-            },
-
-          ]
-        ]
+        vantagens: PlataformaseLearningController.plataformasOpenSource.ServicosVantagens
       }
     },
     methods:{
-      id(){
-        return uidv4();
-      },
 
       animeIcons(){
             animeList(document.getElementsByClassName("vantagem"))
@@ -170,5 +114,7 @@ export default {
 #plataformas-open-source-servicos-vantagens-content{
   margin-top: 30px;
 }
+
+
 
 </style>

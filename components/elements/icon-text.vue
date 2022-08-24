@@ -45,6 +45,7 @@ export default {
 
         .icon-text-body{
             width: 400px!important;
+            flex-wrap: wrap;
 
             p:last-child{
                 padding: 10px 0;
@@ -68,6 +69,31 @@ export default {
                 text-align: justify;
           
         }
-}
+
+        .icon-text-body{
+            flex-wrap: wrap;
+            
+
+            p:last-child{
+                padding: 10px 0;
+
+            }
+
+            p{
+                strong{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .icon-text{
+            padding: 0 10px;
+            overflow: hidden;
+            margin: 0!important;
+            width: 100%;
+            margin:0;
+            // display:none;
+        }
+    }
 
 </style>

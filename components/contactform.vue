@@ -59,7 +59,7 @@ export default {
                 if(this.validEmail(this.email)){
                     msg+="Mensagem enviado com sucesso";
 
-                    this.$axios.post("http://localhost:8000",{
+                    this.$axios.post("https://mail.edudigital-learn.com",{
                             name:this.name,
                             email:this.email,
                             tel:this.tel,
@@ -68,11 +68,11 @@ export default {
                             assunto:this.assunto,
                             mensagem:this.mensagem
                     }).then(res=>{
-                        console.log(res);
+                        res = res.data;
                         Swal.fire({
-                            title:"Sucesso",
-                            html:msg,
-                            icon:"success",
+                            title: res.success ? "Sucesso" : "Erro",
+                            html:res.success ? "Mensagem enviada" : "Mensagem não enviada",
+                            icon: res.success ? "success" : "error",
                             confirmButtonColor:"#008072"
                         }).then(()=>{
                             this.cleanInputs();
@@ -228,7 +228,7 @@ export default {
             color: #fff;
         }
         &:focus{
-            border: 2px solid var(--color-vermelho);
+            border: 2px solid var(--color-cinza);
             outline:none;
         }
     }

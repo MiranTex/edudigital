@@ -1,6 +1,6 @@
 <template>
     <div class="app">
-        <navbar id="navbar"/>
+        <navbar ref="navbar" class="" id="navbar"/>
         <Magicnavbar @fixed="addPadding" id="magicnavbar" />
         <Nuxt ref="body_content" id="body-content" />
         <Footer />
@@ -10,7 +10,7 @@
         <a v-show="!onTop" class="btn btn-primary btnGoTop" @click="e=>{goTop(e)}" href=""><fa :icon="['fas','fa-circle-arrow-up']"/></a>
         </transition>
 
-        <BottomNav :route="route" />
+        <BottomNav id="bottomNav" :route="route" />
     </div>
 </template>
 
@@ -29,14 +29,28 @@ export default {
     }
   },
 
+  watch:{
+    route(_new,_hold){
+      this.route=_new;
+    }
+  },
+
   mounted(){
 
     window.addEventListener("scroll",(e)=>{
 
+     
       let scrollTop = window.scrollY;
+
+      const navbar = document.getElementById("navbar");
+
       if(scrollTop > 500){
+        navbar.classList.add("translated");
+
         this.onTop = false
       }else{
+        navbar.classList.remove("translated");
+
         this.onTop = true
       }
     });
@@ -60,16 +74,43 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+#navbar{
+  transition: all, 400ms;
+}
+
+.translated{
+  transform: translateY(-90px);
+}
+
+.paddinned{
+  margin-top: 61px;
+}
+
+#bottomNav{
+  display: none;
+}
 
  #magicnavbar{
   display: none;
-  
+
+ }
+
+ #body-content{
+  transition: all, 400ms ease;
+  margin-top: 151px;
  }
 
  @media screen and (max-width:950px ){
 
+ #body-content{
+  margin-top: 0;
+ }
   #magicnavbar{
+    display: block;
+  }
+
+  #bottomNav{
     display: block;
   }
 
