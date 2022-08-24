@@ -90,5 +90,20 @@ export default {
             ]
         }
     },
+
+    elibrary:{
+        vantagens:[
+            {
+                icon: "https://edudigital.pt/home/images/Acesso_sem_limite_a_1700_titulos-01.png",
+                title: "Acesso sem limite a 1700 títulos",
+                text: "Dentro da sua plataforma, terá acesso a mais de 1700 de eBooks sobre áreas de formação, através de uma subscrição anual económica, sem limite de consulta."
+            },
+            {
+                icon: "https://edudigital.pt/home/images/Integraao_com_qualquer_LMS.png",
+                title: "Integração com qualquer LMS",
+                text: "Acesso a conteúdos microlearning, dentro da sua plataforma e com fácil acesso a partir de qualquer dispositivo."
+            }
+        ]
+    }
     
 }

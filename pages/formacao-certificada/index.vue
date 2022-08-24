@@ -116,7 +116,7 @@ export default {
   },
 
   mounted(){
-    console.log(PlataformaseLearningController.plataformasOpenSource);
+   
   }
 }
 </script>

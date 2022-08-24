@@ -14,7 +14,7 @@
                 <ul class="menus-top">
                     <li :class="{active:menuActive == '/fale-connosco' }"><NuxtLink  class="menu link" to="/fale-connosco">Fale Connosco</NuxtLink></li>
                     <li :class="{active:menuActive == '/sobre-nos' }"><NuxtLink  class="menu link" to="/sobre-nos">Sobre Nós</NuxtLink></li>
-                    <li><NuxtLink  class="menu link" to="/">Case Studies</NuxtLink></li>
+                    <li><NuxtLink  class="menu link" to="/case-studies">Case Studies</NuxtLink></li>
                     <li><a  class="menu link" target="_blank" href="https://marketplace.edudigital-learn.com">Marketplace <v-icon  size="17" >mdi-open-in-new</v-icon></a></li>
                     <li><NuxtLink  class="btn btn-primary btn-menu" to="/">eLearning <v-icon  size="17" dark>mdi-open-in-new</v-icon></NuxtLink></li>
                 </ul>
@@ -55,16 +55,16 @@
                     <ul>
                         <li><NuxtLink class="menu link" to="/app-servicos-web/integracao-migracao-dados">Integração & Migração de Dados</NuxtLink></li>
                         <li><NuxtLink class="menu link" to="/app-servicos-web/configuracao-avancada">Config Avançadas  & Autenticação</NuxtLink></li>
-                        <li><NuxtLink class="menu link" to="/app-servicos-web">Sistemas eLibrary</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/app-servicos-web/elibrary">Sistemas eLibrary</NuxtLink></li>
                     </ul>
                 </div>
             </li>
 
-            <li class="drop-parent"><a class="menu link" href="#">{{$translate().menus.softwares_academicos}}</a>
+            <li class="drop-parent" :class="{active:menuActive == '/softwares-academicos' }"><NuxtLink class="menu link" to="/softwares-academicos">{{$translate().menus.softwares_academicos}}</NuxtLink>
                 <div class="drop-down">
                     <ul>
-                        <li><a class="menu link" href="#">Sistema de Gestão eSchooling</a></li>
-                        <li><a class="menu link" href="#">Sistema Anti-Plágio</a></li>
+                        <li><NuxtLink class="menu link" to="/softwares-academicos/e-schooling">Sistema de Gestão eSchooling</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/softwares-academicos/anti-plagio">Sistema Anti-Plágio</NuxtLink></li>
                     </ul>
                 </div>
             </li>
