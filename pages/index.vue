@@ -15,7 +15,7 @@
 
     <Section 
       :id="'main-section'"
-      :contentJustify="'center'"
+      :contentJustify="'space-evenly'"
       :itemAlign="'center'"
       :background="'#fff'"
       :flex="'column'"
@@ -26,10 +26,10 @@
       <intersect @enter.once="animeServices">
 
         <div class="index-nossos-serviços">
-          <Icon class="service" v-for="service in links" :key="service+'icon'"
-          :img="service"
-          :text="$translate().menus.plataformas_elearning"
-          :to="'/plataformas-elearning'" 
+          <Icon class="service" v-for="(service,i) in links" :key="i+'icon'+$id()"
+          :img="service.img"
+          :text="service.title"
+          :to="service.to" 
         />
         </div>
 
@@ -136,11 +136,27 @@ export default Vue.extend({
   data(){
     return{
       links:[
-        "https://edudigital.pt/home/images/icone-edudigital-plataformas-novo-01.png",
-        "https://edudigital.pt/home/images/icone-edudigital-elearning-verde-20210309.png",
-        "https://edudigital.pt/home/images/icone-edudigital-formacao-new-20210303-013x.png",
-        "https://edudigital.pt/home/images/icone-edudigital-apps-e-web-cinzento-013x.png",
-        "https://edudigital.pt/home/images/icone-edudigital-gestao-academica-novo-20210303-013x.png"
+        {
+          title:"Plataformas eLearning",
+          to:"/plataformas-elearning",
+          img:"https://edudigital.pt/home/images/icone-edudigital-plataformas-novo-01.png"},
+        {
+          title:"Cursos de eLearning à medida",
+          to:"curso-elearning-amedida",
+          img:"https://edudigital.pt/home/images/icone-edudigital-elearning-verde-20210309.png"},
+        {
+          title:"Formação certificada",
+          to:"plataforma-elearning",
+          img:"https://edudigital.pt/home/images/icone-edudigital-formacao-new-20210303-013x.png"},
+        {
+          title:"APPs & Serviços Web",
+          to:"app-servicos-web",
+          img:"https://edudigital.pt/home/images/icone-edudigital-apps-e-web-cinzento-013x.png"},
+        {
+          title:"Softwares académicos",
+          to:"softwares-academicos",
+          img:"https://edudigital.pt/home/images/icone-edudigital-gestao-academica-novo-20210303-013x.png"
+        }
       ]
     }
   },  
