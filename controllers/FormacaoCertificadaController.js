@@ -44,5 +44,30 @@ export default {
                 text:"Conhecimentos sobre uso das ferramentas de produtividade, e a gestão de volumes de dados."
             },
         ]
+    },
+
+    consultoriaPedagogicaFormacao:{
+        vantagem:[
+            {
+                icon: "https://edudigital.pt/home/images/Resolver_problemas-01.png",
+                title: "Resolver problemas",
+                text: "Fale connosco sobre os seus desafios e nós prestamos a consultoria e a solução que procura, seja uma estratégia, uma formação ou uma implementação."
+            },
+            {
+                icon: "https://edudigital.pt/home/images/Suporte_as_Necessidades.png",
+                title: "Suporte às necessidades",
+                text: "O nosso serviço técnico-pedagógico responde às suas necessidades. Diga-nos o que quer e faremos uma implementação colaborativa consigo."
+            },
+            {
+                icon: "https://edudigital.pt/home/images/Formao_eficiente_2.png",
+                title: "Formação eficiente",
+                text: "Inscreva os seus gestores nos nossos cursos de administradores LMS com as novas atualizações de software."
+            },
+            {
+                icon: "https://edudigital.pt/home/images/Contruo_de_contedos_programticos-01.png",
+                title: "Construção de conteúdos programáticos",
+                text: "Nós iremos criar o programa e unidades temáticas do seu curso, junto com os nossos especialistas e validar consigo."
+            }
+        ]
     }
 }

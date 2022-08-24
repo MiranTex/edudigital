@@ -47,7 +47,7 @@
 
       <SectiondubleCartoon
         :id="'cursos-medida-gamification'"
-        :background="'#D35B40'"
+        :background="'#D35640'"
         :img="require('~/assets/img/cartoom/Grupo_819_.png')"
         :flexDirection="'row-reverse'"
         :color="'#fff'"
@@ -65,7 +65,6 @@
         </template>
       </SectiondubleCartoon>
 
-      <contactform />
 
         <sectionduble
           :id="'producao-eLearning-personalizado'"

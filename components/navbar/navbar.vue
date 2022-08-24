@@ -41,21 +41,21 @@
                 </div>
             </li>
 
-            <li class="drop-parent"><NuxtLink class="menu link" to="/formacao-certificada">{{$translate().menus.formacao_certificada}}</NuxtLink>
+            <li class="drop-parent" :class="{active:menuActive == '/formacao-certificada' }"><NuxtLink class="menu link" to="/formacao-certificada">{{$translate().menus.formacao_certificada}}</NuxtLink>
                 <div class="drop-down">
                     <ul>
                         <li><NuxtLink class="menu link" to="/formacao-certificada/cursos-elearning-catalogo">Cursos eLearning de Catálogo</NuxtLink></li>
-                        <li><a class="menu link" href="#">Consultoria Pedagógica & Foramação</a></li>
+                        <li><NuxtLink class="menu link" to="/formacao-certificada/consultoria-pedagogica-formacao">Consultoria Pedagógica & Foramação</NuxtLink></li>
                     </ul>
                 </div>
             </li>
 
-            <li class="drop-parent"><a class="menu link" href="#">{{$translate().menus.apps_e_servicos_web}}</a>
+            <li class="drop-parent" :class="{active:menuActive == '/app-servicos-web' }"><NuxtLink class="menu link" to="/app-servicos-web">{{$translate().menus.apps_e_servicos_web}}</NuxtLink>
                 <div class="drop-down">
                     <ul>
-                        <li><a class="menu link" href="#">Integração & Migração de Dados</a></li>
-                        <li><a class="menu link" href="#">Config Avançadas  & Autenticação</a></li>
-                        <li><a class="menu link" href="#">Sistemas eLibrary</a></li>
+                        <li><NuxtLink class="menu link" to="/app-servicos-web/integracao-migracao-dados">Integração & Migração de Dados</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/app-servicos-web">Config Avançadas  & Autenticação</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/app-servicos-web">Sistemas eLibrary</NuxtLink></li>
                     </ul>
                 </div>
             </li>

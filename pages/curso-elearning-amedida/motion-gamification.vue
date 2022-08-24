@@ -39,7 +39,7 @@
     <VantagemServicos 
         :vantagens="vantagens" 
         :id="'hosting-gerido-servicos-vantagens'"    
-        :background="'#D35B40'"
+        :background="'#D35640'"
         :color="'#fff'"
         :title="'Serviços e Vantagens'"
     />
@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import CursoseLEarningMedidaController from '~/controllers/CursoseLEarningMedidaController'
+import CursoseLearningMedidaController from '~/controllers/CursoseLearningMedidaController'
 import VantagemServicos from '~/components/elements/vantagemServicos.vue';
 import Contactform from '~/components/contactform.vue';
 import SectiondubleCartoon from '~/components/sections/sectiondubleCartoon.vue';
@@ -58,7 +58,7 @@ import Title from '~/components/elements/title.vue';
 export default {
     data() {
         return {
-            vantagens: CursoseLEarningMedidaController.motionGamification.vantagens
+            vantagens: CursoseLearningMedidaController.motionGamification.vantagens
         };
     },
     components: { VantagemServicos, Contactform, SectiondubleCartoon, Title }
