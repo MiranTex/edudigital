@@ -83,10 +83,10 @@
         <p>Trabalhe com a nossa equipa de designers, para produção de eLearning à medida, gamification e guiões pedagógicos
            atraentes. Ou simplesmente, coloque o seu branding nos nossos cursos de catálogo, em módulos feitos por especialistas e responsivos a qualquer dispositivo.</p>
         <div>
-          <NuxtLink class="btn btn-primary" to="/">Conheça o nosso elearning à medida</NuxtLink>
+          <NuxtLink class="btn btn-gray" to="/">Conheça o nosso elearning à medida</NuxtLink>
         </div>
         <div>
-          <NuxtLink class="btn btn-primary" to="/">Conheça nosso catálogo de cursos</NuxtLink>
+          <NuxtLink class="btn btn-gray" to="/">Conheça nosso catálogo de cursos</NuxtLink>
         </div>
       </template>
     </Sectionduble>
@@ -111,6 +111,13 @@
       </template>
     </Sectionduble>
 
+    <Section
+      :id="'plataformas-elearning-organograma'"
+      :flex="'column'"
+    >
+      <Title :title="'Como trabalhamos'" style="margin-bottom:50px" />
+      <img src="https://edudigital.pt/home/images/Grupo_984.png" width="" alt="" srcset="">
+    </Section>
     
     <Contactform />
   </div>
@@ -131,7 +138,7 @@ import intersect from "~/assets/js/vue-intersect";
 
 
 export default Vue.extend({
-  components: { banner, Section, Contactform, Title, Icon, Sectionduble, intersect},
+  components: { banner, Section, Contactform, Title, Icon, Sectionduble, intersect },
 
   data(){
     return{
