@@ -15,7 +15,7 @@
             <v-icon>mdi-information</v-icon>
         </v-btn>
 
-        <v-btn @click="goTo" value="nearby">
+        <v-btn @click="goTo" value="/case-studies">
             <span>Case Studies</span>
             <v-icon>mdi-domain</v-icon>
         </v-btn>

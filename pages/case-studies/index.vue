@@ -20,14 +20,7 @@
         <Title :title="'Case studies'" />
 
         <div class="case-studies-container">
-            <CaseStudie />
-            <CaseStudie />
-            <CaseStudie />
-            <CaseStudie />
-            <CaseStudie />
-            <CaseStudie />
-            <CaseStudie />
-            <CaseStudie />
+            <CaseStudie v-for="(case_,i) in cases" :data="case_" :id="i" :key="i+$id()" />
 
         </div>
     </Section>
@@ -37,9 +30,16 @@
 <script>
 import Section from '~/components/sections/section.vue';
 import Title from '~/components/elements/title.vue';
-import CaseStudie from '../components/case-studie.vue';
+import CaseStudie from '../../components/case-studie.vue';
+import CaseStudieController from './CaseStudieController';
+
 export default {
-    components: { Section, Title, CaseStudie }
+    components: { Section, Title, CaseStudie },
+    data(){
+        return {
+            cases:CaseStudieController.cases
+        }
+    }
 }
 </script>
 

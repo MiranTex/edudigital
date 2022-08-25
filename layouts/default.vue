@@ -44,12 +44,21 @@ export default {
 
       const navbar = document.getElementById("navbar");
 
-      if(scrollTop > 500){
+      if(scrollTop > 100){
         navbar.classList.add("translated");
+
+   
+      }else{
+        navbar.classList.remove("translated");
+
+      }
+
+      if(scrollTop > 500){
+        // navbar.classList.add("translated");
 
         this.onTop = false
       }else{
-        navbar.classList.remove("translated");
+        // navbar.classList.remove("translated");
 
         this.onTop = true
       }
