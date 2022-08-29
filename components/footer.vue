@@ -3,40 +3,40 @@
         <div id="footer-top">
             <div class="fast-access-menu">
                 <ul class="menu-footer">
-                    <li><a href="#" class="link">O que fazemos</a></li>
-                    <li><a href="#" class="link">{{$translate().menus.plataformas_elearning}}</a></li>
-                    <li><a href="#" class="link">Cursos de eLearning à medida</a></li>
-                    <li><a href="#" class="link">Formação à medida</a></li>
-                    <li><a href="#" class="link">APPs e Serviços Web</a></li>
-                    <li><a href="#" class="link">Softwares Académicos</a></li>
+                    <li><a class="link">O que fazemos</a></li>
+                    <li><NuxtLink to="/plataformas-elearning" class="link">{{$translate().menus.elearning_platforms}}</NuxtLink></li>
+                    <li><NuxtLink to="/curso-elearning-amedida" class="link">{{$translate().menus.elearning_courses}}</NuxtLink></li>
+                    <li><NuxtLink to="/formacao-certificada" class="link">{{$translate().menus.certified_training}}</NuxtLink></li>
+                    <li><NuxtLink to="/app-servicos-web" class="link">{{$translate().menus.apps_e_web_services}}</NuxtLink></li>
+                    <li><NuxtLink to="/softwares-academicos" class="link">{{$translate().menus.academic_software}}s</NuxtLink></li>
                 </ul>
             </div>
             <div class="fast-access-menu">
                 <ul class="menu-footer">
-                    <li><a href="#" class="link">Sobre nós</a></li>
-                    <li><a href="#" class="link">Contactos</a></li>
-                    <li><a href="#" class="link">Case Studies</a></li>
-                    <li><a href="#" class="link">Recrutamento</a></li>
+                    <li><NuxtLink to="/sobre-nos" class="link">{{$translate().menus.about_us}}</NuxtLink></li>
+                    <li><NuxtLink to="/fale-connosco" class="link">{{$translate().menus.talk_to_us}}</NuxtLink></li>
+                    <li><NuxtLink to="/case-studies" class="link">{{$translate().menus.case_studies}}</NuxtLink></li>
+                    <li><a href="https://recrutamento.edudigital-learn.com/" class="link">Recrutamento <v-icon color="#616161" size="17" dark>mdi-open-in-new</v-icon></a></li>
                 </ul>
             </div>
             <div class="fast-access-menu">
                 <ul class="menu-footer">
                     <li><a href="#" class="link">Plataformas</a></li>
-                    <li><a href="#" class="link">Open-source eLearning</a></li>
-                    <li><a href="#" class="link">Totara Academia</a></li>
-                    <li><a href="#" class="link">Área Reservada</a></li>
-                    <li><a href="#" class="link">Agendamento</a></li>
-                    <li><a href="#" class="link">Marketplace</a></li>
+                    <li><NuxtLink to="/plataformas-elearning/plataformas-opens-source" class="link">{{$translate().menus._elearning_platforms.open_source_platforms}}</NuxtLink></li>
+                    <li><NuxtLink to="/plataformas-elearning/plataformas-totara" class="link">{{$translate().menus._elearning_platforms.totara_platforms}}</NuxtLink></li>
+                    <li><a href="#" class="link">Área Reservada <v-icon color="#616161" size="17" dark>mdi-open-in-new</v-icon></a></li>
+                    <li><a href="#" class="link">Agendamento <v-icon color="#616161" size="17" dark>mdi-open-in-new</v-icon></a></li>
+                    <li><a href="#" class="link">Marketplace <v-icon color="#616161" size="17" dark>mdi-open-in-new</v-icon></a></li>
 
                 </ul>
             </div>
             <div class="fast-access-menu">
                 <ul class="menu-footer">
                     <li><a href="#" class="link">Contacte-nos</a></li>
-                    <li><a href="#" class="link">Portugal - Oeiras</a></li>
-                    <li><a href="#" class="link">Moçambique - Maputo</a></li>
-                    <li><a href="#" class="link">Angola - Luanda</a></li>
-                    <li><a href="#" class="link">Cabo Verde - Praia</a></li>
+                    <li><a href="#" class="link">Portugal - Oeiras <v-icon color="#616161" size="17" dark>mdi-open-in-new</v-icon></a></li>
+                    <li><a href="#" class="link">Moçambique - Maputo <v-icon color="#616161" size="17" dark>mdi-open-in-new</v-icon></a></li>
+                    <li><a href="#" class="link">Angola - Luanda <v-icon color="#616161" size="17" dark>mdi-open-in-new</v-icon></a></li>
+                    <li><a href="#" class="link">Cabo Verde - Praia <v-icon color="#616161" size="17" dark>mdi-open-in-new</v-icon></a></li>
                 </ul>
             </div>
             <div class="footer-brand">

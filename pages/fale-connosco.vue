@@ -12,6 +12,33 @@
       </template>
 
     </banner>
+
+
+  <SectiondubleCartoon
+      :id="'sobre-nos-recrutamento'"
+      :img="'https://edudigital.pt/home/images/Recrutamento.png'"
+      :flexDirection="'row-reverse'"
+      :color="'var(--color-cinza)'"
+    >
+      <template #text>
+        <Title :title="'Recrutamento'"/>
+        <p>Interessado em pertencer à nossa equipa? Na EDUdigital,
+            trabalhamos em várias geografias, partilhamos projetos comuns
+            e valorizamos o trabalho em equipa sem fronteiras, numa visão
+            de liderar o setor das tecnologias na aprendizagem nos países
+            de língua portuguesa
+        </p>
+        <div>
+          <a class="btn btn-secondary" target="_blank" href="https://recrutamento.edudigital-learn.com/">Candidatura espontânea <v-icon
+          dark
+          right
+        >
+          mdi-open-in-new
+        </v-icon></a>
+        </div>
+      </template>
+    </SectiondubleCartoon>
+
     <Section :background="'#eee'" :id="'cont'" :fluid="true" :noPadding="true">
     <div>
       <div class="fale-connosco-locale-info">
@@ -43,8 +70,9 @@
 import contactform from '~/components/contactform.vue'
 import Section from '~/components/sections/section.vue'
 import Title from '~/components/elements/title.vue'
+import SectiondubleCartoon from '~/components/sections/sectiondubleCartoon.vue';
 export default {
-  components: { contactform, Section, Title },
+  components: { contactform, Section, Title, SectiondubleCartoon },
 
 }
 </script>

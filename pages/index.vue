@@ -3,12 +3,12 @@
     <banner 
     :backgroundImage="require('~/assets/img/banner-bg.jpg')" 
     :columnsTemplate="'2fr 1fr'"
-    :title="$translate().index.banner.title"
-    :buttonActionText="$translate().index.banner.buttonActionText"
+    :title="$translate().home.banner.title"
+    :buttonActionText="$translate().home.banner.buttonText"
     :buttonActionHref="'/fale-connosco'"
     >
       <template v-slot:text>
-          {{$translate().index.banner.text}}
+          {{$translate().home.banner.text}}
       </template>
 
     </banner>
@@ -21,7 +21,7 @@
       :flex="'column'"
       >
 
-      <Title :textAlign="'center'" style="color:var(--color-cinza)" :title="'Os nossos serviços'" />
+      <Title :textAlign="'center'" style="color:var(--color-cinza)" :title="$translate().home.services.title" />
 
       <intersect @enter.once="animeServices">
 
@@ -34,9 +34,9 @@
         </div>
 
       </intersect>
-    
 
     </Section>
+
 
     <Sectionduble
       :id="'index-inovacao-na-aprendizagem'"
@@ -46,13 +46,14 @@
       :color="'#fff'"
     >
       <template #text>
-        <Title :title="$translate().index.inovacao_na_aprendizagem.title" />
-        <p>{{$translate().index.inovacao_na_aprendizagem.text}}</p>
+        <Title :title="$translate().home.innovation_in_learning.title" />
+        <p>{{$translate().home.innovation_in_learning.text}}</p>
         <div>
-          <NuxtLink class="btn btn-secondary" to="/">{{$translate().index.inovacao_na_aprendizagem.btn_case_studies}}</NuxtLink>
+          <NuxtLink class="btn btn-secondary" to="/case-studies">{{$translate().home.innovation_in_learning.buttonText}}</NuxtLink>
         </div>
       </template>
     </Sectionduble>
+
 
     <Sectionduble
       :id="'index-plataforma-elearning-personalizadas'"
@@ -62,14 +63,15 @@
       :color="'#616161'"
     >
       <template #text>
-        <Title :title="'Plataformas eLearning. Personalizadas. Seguras.'" />
-        <p>Entregamos Plataformas open source, ricas em plugins, com hosting gerido e 
-          suporte técnico para uma boa experiência de eLearning, compatíveis com outros softwares e com relatórios detalhados.</p>
+        <Title :title="$translate().home.elearning_plataforms_customized.title" />
+        <p>{{$translate().home.elearning_plataforms_customized.text}}</p>
         <div>
-          <NuxtLink class="btn btn-secondary" to="/">Conheça as nossas plataformas</NuxtLink>
+          <NuxtLink class="btn btn-secondary" to="/pkataformas_elearning">{{$translate().home.elearning_plataforms_customized.buttonText}}</NuxtLink>
         </div>
       </template>
     </Sectionduble>
+
+
 
     <Sectionduble
       :id="'index-curso-elearning-a-medida'"
@@ -79,17 +81,17 @@
       :color="'#fff'"
     >
       <template #text>
-        <Title :title="'Cursos eLearning. À Medida ou de Catálogo.'" />
-        <p>Trabalhe com a nossa equipa de designers, para produção de eLearning à medida, gamification e guiões pedagógicos
-           atraentes. Ou simplesmente, coloque o seu branding nos nossos cursos de catálogo, em módulos feitos por especialistas e responsivos a qualquer dispositivo.</p>
+        <Title :title="$translate().home.curso_elearning_a_medida.title" />
+        <p>{{$translate().home.curso_elearning_a_medida.text}}</p>
         <div>
-          <NuxtLink class="btn btn-gray" to="/">Conheça o nosso elearning à medida</NuxtLink>
+          <NuxtLink class="btn btn-gray" to="/curso-elearning-amedida">{{$translate().home.curso_elearning_a_medida.buttonText}}</NuxtLink>
         </div>
         <div>
-          <NuxtLink class="btn btn-gray" to="/">Conheça nosso catálogo de cursos</NuxtLink>
+          <NuxtLink class="btn btn-gray" to="/formacao-certificada/cursos-elearning-catalogo">{{$translate().home.curso_elearning_a_medida.buttonText_}}</NuxtLink>
         </div>
       </template>
     </Sectionduble>
+
 
 
     <Sectionduble
@@ -100,24 +102,28 @@
       :color="'#616161'"
     >
       <template #text>
-        <Title :title="'Aplicações web e Serviços académicos'" />
-        <p>Analisamos os dados da sua organização para fazer uma boa experiência de integração de softwares ou de instalação de aplicações, automatizando a gestão da aprendizagem.</p>
+        <Title :title="$translate().home.web_application_academic_services.title" />
+        <p>{{$translate().home.web_application_academic_services.text}}</p>
         <div>
-          <NuxtLink class="btn btn-secondary" to="/">Conheça os nossos Serviços Web e Apps</NuxtLink>
+          <NuxtLink class="btn btn-secondary" to="/app-servicos-web">{{$translate().home.web_application_academic_services.buttonText}}</NuxtLink>
         </div>
         <div>
-          <NuxtLink class="btn btn-secondary" to="/">Conheça nossos Softwares Académicos</NuxtLink>
+          <NuxtLink class="btn btn-secondary" to="/">{{$translate().home.web_application_academic_services.buttonText_}}</NuxtLink>
         </div>
       </template>
     </Sectionduble>
+
+
 
     <Section
       :id="'plataformas-elearning-organograma'"
       :flex="'column'"
     >
-      <Title :title="'Como trabalhamos'" style="margin-bottom:50px" />
+      <Title :title="$translate().home.how_we_work.title" style="margin-bottom:50px" />
       <img src="https://edudigital.pt/home/images/Grupo_984.png" width="" alt="" srcset="">
     </Section>
+
+
     
     <Contactform />
   </div>
@@ -144,23 +150,23 @@ export default Vue.extend({
     return{
       links:[
         {
-          title:"Plataformas eLearning",
+          title:this.$translate().home.services.elearning_plataforms,
           to:"/plataformas-elearning",
           img:"https://edudigital.pt/home/images/icone-edudigital-plataformas-novo-01.png"},
         {
-          title:"Cursos de eLearning à medida",
+          title:this.$translate().home.services.elearning_courses,
           to:"curso-elearning-amedida",
           img:"https://edudigital.pt/home/images/icone-edudigital-elearning-verde-20210309.png"},
         {
-          title:"Formação certificada",
+          title:this.$translate().home.services.certified_training,
           to:"plataforma-elearning",
           img:"https://edudigital.pt/home/images/icone-edudigital-formacao-new-20210303-013x.png"},
         {
-          title:"APPs & Serviços Web",
+          title: this.$translate().home.services.Apps_and_web_services,
           to:"app-servicos-web",
           img:"https://edudigital.pt/home/images/icone-edudigital-apps-e-web-cinzento-013x.png"},
         {
-          title:"Softwares académicos",
+          title:this.$translate().home.services.academic_software,
           to:"softwares-academicos",
           img:"https://edudigital.pt/home/images/icone-edudigital-gestao-academica-novo-20210303-013x.png"
         }
