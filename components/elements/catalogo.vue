@@ -29,7 +29,7 @@ export default {
         border: 3px solid var(--color-verde);
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: flex-start;
     }
 
     .catalogo-part{

@@ -8,7 +8,7 @@ export default {
     services:{
         title: "Os nossos Serviços",
         elearning_plataforms: "Plataformas eLearning",
-        elearning_courses: "Cursos de eLEarning à medida",
+        elearning_courses: "Cursos de eLearning à medida",
         certified_training: "Formação certificada",
         Apps_and_web_services: "Apps e Serviços Web",
         academic_software: "Softwares Académicos"
