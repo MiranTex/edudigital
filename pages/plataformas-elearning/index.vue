@@ -1,14 +1,14 @@
 <template>
   <main>
     <banner
-      :title="'Plataformas eLearning personalizadas'"
+      :title="$translate().elearning_platform.banner.title"
       :backgroundImage="'https://edudigital.pt//images/top-plataformaseLearning%2020210318.png'"
-      :buttonActionText="'Contact-nos'"
+      :buttonActionText="$translate().elearning_platform.banner.buttonText"
+      :buttonActionHref="'/fale-connosco'"
       @after-enter="animeCartoon"
     >
       <template #text>
-        Inovadoras. Poderosas. E open-source. São as plataformas de eLearning que desenvolvemos há mais de 10 anos e em mais de 100 
-        clientes pelo mundo. Implementamos as melhores opções de plataformas, num design à medida da sua organização de forma a garantir uma formação de qualidade.
+        {{$translate().elearning_platform.banner.text}}
       </template>
       <template #cartoon>
         <img width="400" ref="cartoon" src="https://edudigital.pt/home/images/Grupo_450.png" alt="" srcset="">
@@ -28,10 +28,10 @@
       style="color:#fff"
     >
     <template #text>
-        <Title :title="'Aplicações web e Serviços académicos'" />
-        <p>Analisamos os dados da sua organização para fazer uma boa experiência de integração de softwares ou de instalação de aplicações, automatizando a gestão da aprendizagem.</p>
+        <Title :title="$translate().elearning_platform.open_source_platform.title" />
+        <p>{{$translate().elearning_platform.open_source_platform.text}}</p>
         <div>
-          <NuxtLink class="btn btn-secondary" to="/">Saiba mais</NuxtLink>
+          <NuxtLink class="btn btn-secondary" to="/plataformas-elearning/plataformas-open-source">{{$translate().elearning_platform.open_source_platform.buttonText}}</NuxtLink>
         </div>
       </template>
     </SectiondubleCartoon>
@@ -43,11 +43,10 @@
       :flexDirection="'row-reverse'"
     >
     <template #text>
-        <Title :title="'Plataformas Totara'" />
-        <p>A Totara Talent Experience Platform (Totara Learn, Totara Perform e Totara Engage) está concebida para personalizar a formação eLearning das organizações. 
-          Conjuga flexibilidade, UX Design, sincronização com outros softwares, a gestão presencial e o reporting necessários ao seu negócio.</p>
+        <Title :title="$translate().elearning_platform.totara_platforms.title" />
+        <p>{{$translate().elearning_platform.totara_platforms.text}}</p>
         <div>
-          <NuxtLink class="btn btn-secondary" to="/">Saiba mais</NuxtLink>
+          <NuxtLink class="btn btn-secondary" to="/plataformas-elearning/plataformas-totara">{{$translate().elearning_platform.totara_platforms.buttonText}}</NuxtLink>
         </div>
       </template>
     </SectiondubleCartoon>
@@ -59,11 +58,10 @@
       style="color:#fff"
     >
     <template #text>
-        <Title :title="'Cloud & Hosting Gerido'" />
-        <p>Utilizando a nossa Cloud LMS Learn personalizada, com hosting gerido, servida por uma ligação internet de alta-velocidade, 
-          nós entregamos-lhe rapidamente uma plataforma para lançar cursos, acompanhar todos os utilizadores, sem a necessidade de aprender ferramentas de administração.</p>
+        <Title :title="$translate().elearning_platform.cloud_learn.title" />
+        <p>{{$translate().elearning_platform.cloud_learn.text}}</p>
         <div>
-          <NuxtLink class="btn btn-secondary" to="/">Saiba mais</NuxtLink>
+          <NuxtLink class="btn btn-secondary" to="/plataformas-elearning/hosting-gerido">{{$translate().elearning_platform.cloud_learn.buttonText}}</NuxtLink>
         </div>
       </template>
     </SectiondubleCartoon>

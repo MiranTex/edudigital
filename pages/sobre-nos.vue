@@ -237,7 +237,6 @@ export default {
     },
 
     mounted(){
-        document.title = "Sobre nós"
     }
 }
 </script>

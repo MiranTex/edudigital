@@ -1,21 +1,27 @@
 <template>
   <Section :id="'section-contactform'" class="" :background="'var(--color-verde)'">
-
+    <div v-show="loading" class="form-overlay">
+        <v-progress-circular
+        indeterminate
+        size="50"
+        color="#008072"
+        ></v-progress-circular>
+    </div>
     <intersect @enter.once="animeInputs">
 
         <div id="form-contact" class="form-contact">
-            <Title class="form-title" :type="'sub'" :title="'Contacte-nos'"></Title>
+            <Title class="form-title" :type="'sub'" :title="$translate().contactform.title"></Title>
 
             <div id="form-content" class="form-content">
-                <input v-model="name" placeholder="Nome*" type="text" class="form-control">
-                <input v-model="email" placeholder="Email*" type="text" class="form-control">
-                <input v-model="tel" placeholder="Telemóvel*" type="text" class="form-control">
-                <input v-model="empresa" placeholder="Empresa" type="text" class="form-control">
-                <input v-model="cargo" placeholder="Cargo" type="text" class="form-control">
-                <input v-model="assunto" placeholder="Assunto*" type="text" class="form-control">
-                <textarea v-model="mensagem" placeholder="Mensagem*" class="form-control text-area" name="" id="" cols="30" rows="10"></textarea>
-                <span>*Campos obrigatórios</span>
-                <button @click="sendForm" type="button" class="btn btn-gray">Enviar</button>
+                <input v-model="name" :placeholder="$translate().contactform.name" type="text" class="form-control">
+                <input v-model="email" :placeholder="$translate().contactform.email" type="text" class="form-control">
+                <input v-model="tel" :placeholder="$translate().contactform.phone" type="text" class="form-control">
+                <input v-model="empresa" :placeholder="$translate().contactform.company" type="text" class="form-control">
+                <input v-model="cargo" :placeholder="$translate().contactform.office" type="text" class="form-control">
+                <input v-model="assunto" :placeholder="$translate().contactform.subjet" type="text" class="form-control">
+                <textarea v-model="mensagem" :placeholder="$translate().contactform.message" class="form-control text-area" name="" id="" cols="30" rows="10"></textarea>
+                <span>*{{$translate().contactform.required_fields}}</span>
+                <button @click="sendForm" type="button" class="btn btn-gray">{{$translate().contactform.sendButton}}</button>
             </div>
 
         </div>
@@ -42,7 +48,9 @@ export default {
             empresa:null,
             cargo:null,
             assunto:null,
-            mensagem:null
+            mensagem:null,
+
+            loading:false
         }
     },
 
@@ -58,7 +66,8 @@ export default {
             if(valide){
                 if(this.validEmail(this.email)){
                     msg+="Mensagem enviado com sucesso";
-
+                    this.loading = true;
+                    
                     this.$axios.post("https://mail.edudigital-learn.com",{
                             name:this.name,
                             email:this.email,
@@ -69,13 +78,15 @@ export default {
                             mensagem:this.mensagem
                     }).then(res=>{
                         res = res.data;
+                        this.loading = false;
                         Swal.fire({
                             title: res.success ? "Sucesso" : "Erro",
-                            html:res.success ? "Mensagem enviada" : "Mensagem não enviada",
+                            html:res.success ? this.$translate().contactform.messageSent :  this.$translate().contactform.messageUnSent,
                             icon: res.success ? "success" : "error",
                             confirmButtonColor:"#008072"
                         }).then(()=>{
                             this.cleanInputs();
+
                         })
                     });
 
@@ -87,16 +98,20 @@ export default {
                         html:msg,
                         icon:"warning",
                         confirmButtonColor:"#008072"
+
+                        
                     })
+
+                    this.loading = false;s
                 }
 
             }else{
 
-                msg+= "Esses campos são obrigatórios:";
+                msg+= this.$translate().contactform.required;
 
-                errors.forEach(error => {
-                    msg+=`<br>${error}`
-                });
+                // errors.forEach(error => {
+                //     msg+=`<br>${error}`
+                // });
 
                 Swal.fire({
                     title:"Atenção",
@@ -181,6 +196,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+    #section-contactform{
+        position: relative;
+    }
     .form-contact{
         display: flex;
         flex-direction: column;
@@ -237,6 +256,18 @@ export default {
         padding: 10px 10px;
         height: auto;
         resize: none;
+
+    }
+
+    .form-overlay{
+        position: absolute;
+        width: 100%;
+        background: rgba($color: #000, $alpha: 0.5);
+        height: 100%;
+        z-index: 99999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
     }
 

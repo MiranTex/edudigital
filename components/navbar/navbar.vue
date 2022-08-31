@@ -12,59 +12,59 @@
         <div class="top-3">
             <nav>
                 <ul class="menus-top">
-                    <li :class="{active:menuActive == '/fale-connosco' }"><NuxtLink  class="menu link" to="/fale-connosco">Fale Connosco</NuxtLink></li>
-                    <li :class="{active:menuActive == '/sobre-nos' }"><NuxtLink  class="menu link" to="/sobre-nos">Sobre Nós</NuxtLink></li>
-                    <li><NuxtLink  class="menu link" to="/case-studies">Case Studies</NuxtLink></li>
-                    <li><a  class="menu link" target="_blank" href="https://marketplace.edudigital-learn.com">Marketplace <v-icon  size="17" >mdi-open-in-new</v-icon></a></li>
-                    <li><NuxtLink  class="btn btn-primary btn-menu" to="/">eLearning <v-icon  size="17" dark>mdi-open-in-new</v-icon></NuxtLink></li>
+                    <li :class="{active:menuActive == '/fale-connosco' }"><NuxtLink  class="menu link" to="/fale-connosco">{{$translate().menus.talk_to_us}}</NuxtLink></li>
+                    <li :class="{active:menuActive == '/sobre-nos' }"><NuxtLink  class="menu link" to="/sobre-nos">{{$translate().menus.about_us}}</NuxtLink></li>
+                    <li :class="{active:menuActive == '/case-studies' }"><NuxtLink  class="menu link" to="/case-studies">{{$translate().menus.case_studies}}</NuxtLink></li>
+                    <li><a  class="menu link" target="_blank" href="https://marketplace.edudigital-learn.com">{{$translate().menus.marketplace}} <v-icon  size="17" >mdi-open-in-new</v-icon></a></li>
+                    <li><NuxtLink  class="btn btn-primary btn-menu" to="/">{{$translate().menus.elearning}} <v-icon  size="17" dark>mdi-open-in-new</v-icon></NuxtLink></li>
                 </ul>
             </nav>
         </div>
     </div>
     <div id="bottom">
         <ul class="menu-bottom">
-            <li class="drop-parent" :class="{active:menuActive == '/plataformas-elearning' }"><NuxtLink to="/plataformas-elearning" class="menu link">{{$translate().menus.plataformas_elearning}}</NuxtLink>
+            <li class="drop-parent" :class="{active:menuActive == '/plataformas-elearning' }"><NuxtLink to="/plataformas-elearning" class="menu link">{{$translate().menus.elearning_platforms}}</NuxtLink>
                 <div class="drop-down">
                     <ul>
-                        <li><NuxtLink class="menu link" to="/plataformas-elearning/plataformas-open-source">Plataformas Open-source</NuxtLink></li>
-                        <li><NuxtLink class="menu link" to="/plataformas-elearning/plataformas-totara">Plataformas Totara</NuxtLink></li>
-                        <li><NuxtLink class="menu link" to="/plataformas-elearning/hosting-gerido">Hosting Gerido & Cloud</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/plataformas-elearning/plataformas-open-source">{{$translate().menus._elearning_platforms.open_source_platforms}}</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/plataformas-elearning/plataformas-totara">{{$translate().menus._elearning_platforms.totara_platforms}}</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/plataformas-elearning/hosting-gerido">{{$translate().menus._elearning_platforms.managed_hosting_cloud}}</NuxtLink></li>
                     </ul>
                 </div>
             </li>
-            <li class="drop-parent" :class="{active:menuActive == '/curso-elearning-amedida' }"><NuxtLink to="/curso-elearning-amedida" class="menu link">{{$translate().menus.cursos_de_elearning_a_medida}}</NuxtLink>
+            <li class="drop-parent" :class="{active:menuActive == '/curso-elearning-amedida' }"><NuxtLink to="/curso-elearning-amedida" class="menu link">{{$translate().menus.elearning_courses}}</NuxtLink>
                 <div class="drop-down">
                     <ul>
-                        <li><NuxtLink class="menu link" to="/curso-elearning-amedida/elearning-personalizado">Produção eLearning Personalizado</NuxtLink></li>
-                        <li><NuxtLink class="menu link" to="/curso-elearning-amedida/motion-gamification">Motion Graphics & Gamification</NuxtLink></li>
-                    </ul>
-                </div>
-            </li>
-
-            <li class="drop-parent" :class="{active:menuActive == '/formacao-certificada' }"><NuxtLink class="menu link" to="/formacao-certificada">{{$translate().menus.formacao_certificada}}</NuxtLink>
-                <div class="drop-down">
-                    <ul>
-                        <li><NuxtLink class="menu link" to="/formacao-certificada/cursos-elearning-catalogo">Cursos eLearning de Catálogo</NuxtLink></li>
-                        <li><NuxtLink class="menu link" to="/formacao-certificada/consultoria-pedagogica-formacao">Consultoria Pedagógica & Foramação</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/curso-elearning-amedida/elearning-personalizado">{{$translate().menus._elearning_courses.elearning_production}}</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/curso-elearning-amedida/motion-gamification">{{$translate().menus._elearning_courses.video_motion_graphics}}</NuxtLink></li>
                     </ul>
                 </div>
             </li>
 
-            <li class="drop-parent" :class="{active:menuActive == '/app-servicos-web' }"><NuxtLink class="menu link" to="/app-servicos-web">{{$translate().menus.apps_e_servicos_web}}</NuxtLink>
+            <li class="drop-parent" :class="{active:menuActive == '/formacao-certificada' }"><NuxtLink class="menu link" to="/formacao-certificada">{{$translate().menus.certified_training}}</NuxtLink>
                 <div class="drop-down">
                     <ul>
-                        <li><NuxtLink class="menu link" to="/app-servicos-web/integracao-migracao-dados">Integração & Migração de Dados</NuxtLink></li>
-                        <li><NuxtLink class="menu link" to="/app-servicos-web/configuracao-avancada">Config Avançadas  & Autenticação</NuxtLink></li>
-                        <li><NuxtLink class="menu link" to="/app-servicos-web/elibrary">Sistemas eLibrary</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/formacao-certificada/cursos-elearning-catalogo">{{$translate().menus._certified_training.catalog_elearning_courses}}</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/formacao-certificada/consultoria-pedagogica-formacao">{{$translate().menus._certified_training.pedagogical_consulting_training}}</NuxtLink></li>
                     </ul>
                 </div>
             </li>
 
-            <li class="drop-parent" :class="{active:menuActive == '/softwares-academicos' }"><NuxtLink class="menu link" to="/softwares-academicos">{{$translate().menus.softwares_academicos}}</NuxtLink>
+            <li class="drop-parent" :class="{active:menuActive == '/app-servicos-web' }"><NuxtLink class="menu link" to="/app-servicos-web">{{$translate().menus.apps_e_web_services}}</NuxtLink>
                 <div class="drop-down">
                     <ul>
-                        <li><NuxtLink class="menu link" to="/softwares-academicos/e-schooling">Sistema de Gestão eSchooling</NuxtLink></li>
-                        <li><NuxtLink class="menu link" to="/softwares-academicos/anti-plagio">Sistema Anti-Plágio</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/app-servicos-web/integracao-migracao-dados">{{$translate().menus._apps_e_web_services.system_integration_data_migration}}</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/app-servicos-web/configuracao-avancada">{{$translate().menus._apps_e_web_services.advanced_settings_authentication}}</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/app-servicos-web/elibrary">{{$translate().menus._apps_e_web_services.elibrary_system}}</NuxtLink></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="drop-parent" :class="{active:menuActive == '/softwares-academicos' }"><NuxtLink class="menu link" to="/softwares-academicos">{{$translate().menus.academic_software}}</NuxtLink>
+                <div class="drop-down">
+                    <ul>
+                        <li><NuxtLink class="menu link" to="/softwares-academicos/e-schooling">{{$translate().menus._academic_software.eSchooling_system}}</NuxtLink></li>
+                        <li><NuxtLink class="menu link" to="/softwares-academicos/anti-plagio">{{$translate().menus._academic_software.anti_plagiarism_sytem}}</NuxtLink></li>
                     </ul>
                 </div>
             </li>

@@ -1,16 +1,14 @@
 <template>
     <main>
         <banner
-             :title="'Personalização de conteúdos eLearning, lado a lado consigo'"
+            :title="$translate().curso_elearning_amedida.banner.title"
             :backgroundImage="'https://edudigital.pt/images/bigstock-Smiling-African-American-Girl-blue.png'"
-            :buttonActionText="'Contacte-nos'"
+            :buttonActionText="$translate().curso_elearning_amedida.banner.buttonText"
+            :buttonActionHref="'/fale-connosco'"
             @after-enter="animeCartoon"
         >
             <template #text>
-                Desde 2012 que criamos eLearning à medida para organizações em todo o mundo, desde instituições sem fins 
-                lucrativos até empresas multinacionais, para vários setores e indústrias. 
-                Qualquer que seja o seu projeto eLearning, nós podemos estar lado a lado consigo para o desenvolver. 
-                Desde um pedaço de microlearning até programas de formação mais globais e complexos, com milhares de pessoas.
+                {{$translate().curso_elearning_amedida.banner.text}}
             </template>
              <template #cartoon>
                 <img width="400" ref="cartoon" src="https://edudigital.pt/home/images/Grupo_821.png" alt="" srcset="">
@@ -32,15 +30,11 @@
         :color="'#fff'"
       >
         <template v-slot:text>
-            <Title :title="'Produção eLearning personalizado'"/>
-            <p>
-                Os nossos learning designers são especialistas em transformar os seus manuais existentes em formação interativa de qualidade. 
-                Se tem formação presencial já pronta, nós redesenhamos para experiências de eLearning envolventes e multi-dispositivo. 
-                Personalizado com o seu branding, cada curso à medida pode incluir as últimas inovações, desde interação social até adaptativo.
-            </p>
+            <Title :title="$translate().curso_elearning_amedida.customized_elearning.title"/>
+            <p>{{$translate().curso_elearning_amedida.customized_elearning.text}}</p>
             <div>
 
-              <NuxtLink to="" class="btn btn-primary">Saiba mais</NuxtLink>
+              <NuxtLink to="/curso-elearning-amedida/elearning-personalizado" class="btn btn-primary">{{$translate().curso_elearning_amedida.customized_elearning.buttonText}}</NuxtLink>
             </div>
         </template>
       </SectiondubleCartoon>
@@ -53,14 +47,11 @@
         :color="'#fff'"
       >
         <template v-slot:text>
-            <Title :title="'Motion Graphics & Gamification'"/>
-            <p>
-                Para um nível acima de soluções de eLearning, realizamos gravações vídeo e locuções, 
-                animações em motion graphics ou realçamos formatos de eLearning tradicionais com mecânicas de jogo ou aprendizagem social, para uma aprendizagem de futuro.
-            </p>
+            <Title :title="$translate().curso_elearning_amedida.audiovisual_production.title"/>
+            <p>{{$translate().curso_elearning_amedida.audiovisual_production.text}}</p>
             <div>
 
-              <NuxtLink to="" class="btn btn-secondary">Saiba mais</NuxtLink>
+              <NuxtLink to="/curso-elearning-amedida/motion-gamification" class="btn btn-secondary">{{$translate().curso_elearning_amedida.audiovisual_production.buttonText}}</NuxtLink>
             </div>
         </template>
       </SectiondubleCartoon>
