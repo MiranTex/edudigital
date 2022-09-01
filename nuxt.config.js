@@ -79,11 +79,7 @@ export default {
       }
     },
   },
-  server:{
-    host:"192.168.15.14",
-    port:8001
-  },
-
+  
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },

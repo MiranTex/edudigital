@@ -20,16 +20,16 @@ export default{
 
     _elearning_courses:{
         elearning_production: "Produção de eLearning Personalizado",
-        video_motion_graphics: "Video & Motions graphics"
+        video_motion_graphics: "Motions graphics & Gamification"
     },
 
     _certified_training:{
         catalog_elearning_courses: "Cursos eLearning de Catálogo",
-        pedagogical_consulting_training: "Consultoria pedagógica & Formação"
+        pedagogical_consulting_training: "Consultoria Pedagógica & Formação"
     },
 
     _apps_e_web_services:{
-        system_integration_data_migration: "Integração e Migração de dados",
+        system_integration_data_migration: "Integração & Migração de dados",
         advanced_settings_authentication: "Configuração Avançadas & Autenticação ",
         elibrary_system: "Sistemas eLibrary"
 
