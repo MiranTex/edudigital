@@ -22,6 +22,7 @@ export default {
     video_motion_graphics: 'Video & Motions graphics',
   },
 
+<<<<<<< HEAD
   _certified_training: {
     catalog_elearning_courses: 'Cursos eLearning de Catálogo',
     pedagogical_consulting_training: 'Consultoria pedagógica & Formação',
@@ -37,3 +38,27 @@ export default {
     anti_plagiarism_sytem: 'Sistema Anti-plágio',
   },
 }
+=======
+    _elearning_courses:{
+        elearning_production: "Produção de eLearning Personalizado",
+        video_motion_graphics: "Motions graphics & Gamification"
+    },
+
+    _certified_training:{
+        catalog_elearning_courses: "Cursos eLearning de Catálogo",
+        pedagogical_consulting_training: "Consultoria Pedagógica & Formação"
+    },
+
+    _apps_e_web_services:{
+        system_integration_data_migration: "Integração & Migração de dados",
+        advanced_settings_authentication: "Configuração Avançadas & Autenticação ",
+        elibrary_system: "Sistemas eLibrary"
+
+    },
+    _academic_software:{
+        eSchooling_system: "Sistema de Gestão eSchooling",
+        anti_plagiarism_sytem: "Sistema Anti-plágio"
+
+    }
+}
+>>>>>>> 5e8e2630f3fa061a29c58ac9284e6971ae60da2f
