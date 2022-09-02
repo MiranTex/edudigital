@@ -15,15 +15,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    "~/assets/css/main.scss"
-  ],
+  css: ['~/assets/css/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    "~/plugins/langHelper.js",
-    '~/plugins/uuidHelper.js'
-  ],
+  plugins: ['~/plugins/langHelper.js', '~/plugins/uuidHelper.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -35,7 +30,7 @@ export default {
     '@nuxtjs/fontawesome',
     '@nuxtjs/dotenv',
     '@nuxtjs/vuetify',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,15 +43,17 @@ export default {
     'nuxt-buefy',
   ],
 
-  buefy: { /* buefy options */ },
+  buefy: {
+    /* buefy options */
+  },
 
   fontawesome: {
     component: 'Fa',
     suffix: false,
     icons: {
-        solid: true,
-        brands: true,
-      },
+      solid: true,
+      brands: true,
+    },
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -67,24 +64,23 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
-    icon:{
-      source:"/.static/icon.png",
-      sizes: [64, 120, 144, 152, 192, 384, 512]
+    icon: {
+      source: '/.static/icon.png',
+      sizes: [64, 120, 144, 152, 192, 384, 512],
     },
     manifest: {
       lang: 'pt',
-      name:"EDUdigital",
+      name: 'EDUdigital',
       meta: {
-        charset:"utf-8"
-      }
+        charset: 'utf-8',
+      },
     },
   },
-  server:{
-    host:"192.168.15.14",
-    port:8001
+  server: {
+    host: '192.168.15.14',
+    port: 8001,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  },
+  build: {},
 }

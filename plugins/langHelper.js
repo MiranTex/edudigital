@@ -1,7 +1,7 @@
-import langs from "~/lang"
+import langs from '~/lang'
 
-export default ({app},inject)=>{
-    inject("translate",()=>{
-        return langs()
-    })
+export default ({ app }, inject) => {
+  inject('translate', () => {
+    return langs()
+  })
 }

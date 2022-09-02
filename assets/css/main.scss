@@ -1,203 +1,187 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-@import "./vars.scss";
+@import './vars.scss';
 
-@import "./buttons.scss";
+@import './buttons.scss';
 
-@import "./helpers.scss";
+@import './helpers.scss';
 
-
-
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    padding: 0!important;
+body {
+  padding: 0 !important;
 }
-strong{
-  
+strong {
 }
-*{
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: 'PT Sans', sans-serif;
+  color: inherit;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.link {
+  color: var(--color-verde);
+
+  &:hover {
+    color: var(--color-verde-light) !important;
+  }
+}
+
+.menu {
+  transition: all 400ms;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.drop-parent {
+  position: relative;
+
+  .drop-down {
+    display: none;
+    position: absolute;
+    box-shadow: 1px 3px 3px var(--color-cinza-black);
+    overflow: hidden;
+    width: 100%;
     padding: 0;
-    margin: 0;
-    text-decoration: none;
-    font-family: "PT Sans", sans-serif;
-    color: inherit;
-    list-style: none;
-    box-sizing: border-box;
-}
+    padding-top: 25px;
+    top: 20px;
 
-.flex-row{
-    flex-direction: row;
-}
+    z-index: 99999;
 
-.flex-column{
-    flex-direction: column;
-}
+    background: var(--color-light);
 
-.flex-row-reverse{
-    flex-direction: row-reverse;
-}
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
 
-.flex-column-reverse{
-    flex-direction: column-reverse;
+    transition: display, 400ms ease-in-out;
 
-}
-
-.link{
-    color: var(--color-verde);
-
-    &:hover{
-        color: var(--color-verde-light)!important;
-    }
-}
-
-.menu{
-
-    transition: all 400ms;
-
-    &:hover{
-        transform: scale(1.1);
-    }
-}
-
-
-
-.drop-parent{
-
-    position: relative;
-
-    .drop-down{
-        display: none;
-        position: absolute;
-        box-shadow: 1px 3px 3px var(--color-cinza-black);
-        overflow: hidden;
-        width: 100%;
-        padding: 0;
-        padding-top: 25px;
-        top: 20px;
-
-        z-index: 99999;
-
-        background: var(--color-light);
-
-        border-radius: 0 0 var(--border-radius) var(--border-radius);
-
-        transition: display, 400ms ease-in-out;
-        
-        ul{
-            display: flex!important;
-            flex-direction: column!important;
-            li{
-                transition: all 150ms ease;
-                display: flex;
-                a{
-                    width: 100%;
-                    transition: all 150ms ease;
-                }
-                background: var(--color-light);
-                padding: 10px 0;
-                width: 100%;
-                &:hover{
-                    background-color: #008072;
-                    
-                }
-
-                &:hover .link{
-                    color: #fff!important;
-                } 
-            }
-        }
-        
-    }
-
-    &:hover .drop-down{
+    ul {
+      display: flex !important;
+      flex-direction: column !important;
+      li {
+        transition: all 150ms ease;
         display: flex;
+        a {
+          width: 100%;
+          transition: all 150ms ease;
+        }
+        background: var(--color-light);
+        padding: 10px 0;
+        width: 100%;
+        &:hover {
+          background-color: #008072;
+        }
+
+        &:hover .link {
+          color: #fff !important;
+        }
+      }
     }
+  }
+
+  &:hover .drop-down {
+    display: flex;
+  }
 }
 
+.btnGoTop {
+  position: fixed;
 
-.btnGoTop{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    position: fixed;
+  font-size: 22px;
 
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  right: 40px;
+  bottom: 40px;
 
-    font-size: 22px;
+  border-radius: 50%;
 
-    right: 40px;
-    bottom: 40px;
+  border: 1px solid var(--color-vermelho);
 
-    border-radius: 50%;
+  opacity: 0.6;
 
-    border: 1px solid var(--color-vermelho);
+  transition: all 400ms ease;
 
-    opacity: 0.6;
-
-    transition: all 400ms ease;
-
-    &:hover{
-        opacity: 1;
-        color: #fff!important;
-    }
+  &:hover {
+    opacity: 1;
+    color: #fff !important;
+  }
 }
 
-.fade-enter-active, .fade-leave-active {
-    transition: opacity .4s;
-  }
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    opacity: 0;
-  }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 
+.index-nossos-serviços {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 30px 0;
+  flex-wrap: wrap;
+}
 
+.vantagem-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+}
 
-  .index-nossos-serviços{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 30px 0;
-    flex-wrap: wrap;
-  }
-
-  .vantagem-container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
- /* Track */
+/* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+  background: #f1f1f1;
+}
 
-  @media screen and (max-width:950px ){
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
 
-   .btnGoTop{
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
+@media screen and (max-width: 950px) {
+  .btnGoTop {
     width: 50px;
     height: 50px;
     bottom: 60px;
 
     right: 40px;
     bottom: 80px;
-   }
-  
-   }
+  }
+}

@@ -1,5 +1,5 @@
-import {v4 as uidv4} from "uuid";
+import { v4 as uidv4 } from 'uuid'
 
-export const id = ()=> {
-    return uidv4();
+export const id = () => {
+  return uidv4()
 }

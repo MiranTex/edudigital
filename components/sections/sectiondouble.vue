@@ -1,66 +1,58 @@
 <template>
-    <Section class="section-double" :id="id" @end-animation="$emit('end-animation');" :flex="flexDirection" :background="background" :noPadding="noPadding" >
+  <Section
+    :id="id"
+    class="section-double"
+    :flex="flexDirection"
+    :background="background"
+    :no-padding="noPadding"
+    @end-animation="$emit('end-animation')"
+  >
+    <div :style="{ color: color || 'inherit' }">
+      <slot name="left"> </slot>
+    </div>
 
-
-            <div :style="{color:this.color || 'inherit'}">
-                <slot name="left"> </slot>
-            </div>
-
-            
-            <div :style="{color:this.color || 'inherit'}" class="">
-                <slot name="right"></slot>
-            </div>
-         
-            
-
-    
-            
-     
-    </Section>
+    <div :style="{ color: color || 'inherit' }" class="">
+      <slot name="right"></slot>
+    </div>
+  </Section>
 </template>
 
 <script>
-import { upDownAnimation } from '~/assets/js/animate';
-import Section from './section.vue';
+import Section from './section.vue'
+import { upDownAnimation } from '~/assets/js/animate'
 
 export default {
-    props: ["id", "background", "flexDirection","color","noPadding"],
-    components: { Section },
-    methods:{
-    }
+  components: { Section },
+  props: ['id', 'background', 'flexDirection', 'color', 'noPadding'],
+  methods: {},
 }
 </script>
 
 <style scoped lang="scss">
+.section-double {
+  flex-direction: row-reverse !important;
 
-    .section-double{
+  div {
+    flex: 1;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+  }
+}
 
-        flex-direction: row-reverse!important;
+@media screen and (max-width: 900px) {
+  .section-double {
+    display: flex;
+    flex-direction: row-reverse !important;
 
-       
-        div{
-            flex: 1;
-            padding: 20px 20px;
-            display: flex;
-            justify-content: center;
-        }
+    div {
+      text-align: center;
     }
+    // .sectiondoubleCartoon-text{
 
-
-    @media screen and (max-width:900px) {
-        .section-double{
-            display: flex;
-            flex-direction: row-reverse!important;
-
-            div{
-                text-align: center;
-            }
-            // .sectiondoubleCartoon-text{
-
-            //     display: flex;
-            //     flex-direction: column!important;
-            // }
-        }
-
-    }
+    //     display: flex;
+    //     flex-direction: column!important;
+    // }
+  }
+}
 </style>
