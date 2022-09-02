@@ -76,15 +76,6 @@ export default {
       },
     },
   },
-<<<<<<< HEAD
-  server: {
-    host: '192.168.15.14',
-    port: 8001,
-  },
-
-=======
-  
->>>>>>> 5e8e2630f3fa061a29c58ac9284e6971ae60da2f
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }
